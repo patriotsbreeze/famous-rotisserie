@@ -24,7 +24,6 @@ const Navbar = () => {
     { name: 'Catering', path: '/catering' },
     { name: 'Franchising', path: '/franchising' },
     { name: 'Careers', path: '/careers' },
-    { name: 'Offers', path: '/offers' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -69,10 +68,6 @@ const Navbar = () => {
                 )}
               </Link>
             ))}
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
           </div>
 
           {/* Mobile Menu Button */}

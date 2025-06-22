@@ -48,26 +48,14 @@ const About = () => {
     }
   ];
 
-  const timeline = [
+  const serviceAreas = [
     {
-      year: '2010',
-      title: 'Founded',
-      description: 'Famous Rotisserie & Grill opens its first location, becoming a local culinary institution.'
+      state: 'New York',
+      cities: ['Valley Stream', 'Elmhurst', 'Jackson Heights', 'Brooklyn']
     },
     {
-      year: '2015',
-      title: 'Expansion',
-      description: 'Expanded to multiple locations in New York and Maryland.'
-    },
-    {
-      year: '2020',
-      title: 'Delivery Focus',
-      description: 'Enhanced delivery services to put a new spin on food delivery.'
-    },
-    {
-      year: '2024',
-      title: 'Today',
-      description: 'Continuing to serve fresh, flavorful food with authentic Mexican rostisado style cooking.'
+      state: 'Maryland',
+      cities: ['Wheaton']
     }
   ];
 
@@ -111,7 +99,7 @@ const About = () => {
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Famous Rotisserie & Grill is the destination of choice for people looking for great 
-                fast food restaurants in Valley Stream, NY and Silver Spring, MD. Whether you're looking 
+                fast food restaurants in our various locations in New York and Maryland. Whether you're looking 
                 for great fast food or a friendly atmosphere, Famous Rotisserie & Grill has it all.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -226,52 +214,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gray-900 mb-6">
-              Our <span className="text-gradient">Journey</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From our humble beginnings to becoming a beloved local institution.
-            </p>
-          </motion.div>
-
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-amber-200 h-full"></div>
-            <div className="space-y-12">
-              {timeline.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
-                >
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-white p-6 rounded-2xl shadow-lg">
-                      <div className="text-2xl font-bold text-amber-600 mb-2">{item.year}</div>
-                      <h3 className="text-xl font-playfair font-semibold text-gray-900 mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600">{item.description}</p>
-                    </div>
-                  </div>
-                  <div className="w-4 h-4 bg-amber-600 rounded-full border-4 border-white shadow-lg z-10"></div>
-                  <div className="w-1/2"></div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Locations Section */}
       <section className="py-16 bg-white">
         <div className="container-custom">
@@ -290,55 +232,34 @@ const About = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <MapPin size={32} className="text-amber-600" />
-                <h3 className="text-2xl font-playfair font-bold text-gray-900">New York</h3>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-amber-600 rounded-full"></div>
-                  <span className="text-gray-700">Valley Stream</span>
+            {serviceAreas.map((area, index) => (
+              <motion.div
+                key={area.state}
+                initial={{ opacity: 0, x: index === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <MapPin size={32} className="text-amber-600" />
+                  <h3 className="text-2xl font-playfair font-bold text-gray-900">{area.state}</h3>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-amber-600 rounded-full"></div>
-                  <span className="text-gray-700">Queens</span>
+                <div className="space-y-3">
+                  {area.cities.map(city => (
+                    <div key={city} className="flex items-center gap-3">
+                      <div className="w-3 h-3 bg-amber-600 rounded-full"></div>
+                      <span className="text-gray-700">{city}</span>
+                    </div>
+                  ))}
                 </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <MapPin size={32} className="text-amber-600" />
-                <h3 className="text-2xl font-playfair font-bold text-gray-900">Maryland</h3>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-amber-600 rounded-full"></div>
-                  <span className="text-gray-700">Silver Spring</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-amber-600 rounded-full"></div>
-                  <span className="text-gray-700">Wheaton</span>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-amber-600 to-orange-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-amber-600 to-orange-600">
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

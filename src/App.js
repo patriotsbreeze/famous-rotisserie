@@ -11,7 +11,6 @@ import Locations from './pages/Locations';
 import Catering from './pages/Catering';
 import Franchising from './pages/Franchising';
 import Careers from './pages/Careers';
-import Offers from './pages/Offers';
 
 function App() {
   return (
@@ -26,14 +25,14 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/menu" element={<Menu />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/locations" element={<Locations />} />
+          <Route path="/menu" element={<Menu />} />
+          
+          <Route path="/contact" element={<Contact />} />
           <Route path="/catering" element={<Catering />} />
           <Route path="/franchising" element={<Franchising />} />
           <Route path="/careers" element={<Careers />} />
-          <Route path="/offers" element={<Offers />} />
         </Routes>
       </main>
       <Footer />

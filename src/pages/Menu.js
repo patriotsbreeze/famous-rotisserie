@@ -31,8 +31,7 @@ const Menu = () => {
       category: 'chicken',
       popular: true,
       image: 'http://www.famousrotisserie.com/picture/product_pepper_chicken.jpg',
-      spicy: false,
-      vegetarian: false
+      spicy: false
     },
     {
       id: 2,
@@ -41,8 +40,7 @@ const Menu = () => {
       category: 'chicken',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Blacken_chicken.jpg',
-      spicy: false,
-      vegetarian: false
+      spicy: false
     },
     {
       id: 3,
@@ -51,8 +49,7 @@ const Menu = () => {
       category: 'chicken',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Orange_chicken.jpg',
-      spicy: false,
-      vegetarian: false
+      spicy: false
     },
     {
       id: 4,
@@ -61,8 +58,7 @@ const Menu = () => {
       category: 'chicken',
       popular: true,
       image: 'http://www.famousrotisserie.com/picture/product_Signature_bourbon_chicken.jpg',
-      spicy: false,
-      vegetarian: false
+      spicy: false
     },
     {
       id: 5,
@@ -71,8 +67,7 @@ const Menu = () => {
       category: 'chicken',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Famous_teriyaki_chicken.jpg',
-      spicy: false,
-      vegetarian: false
+      spicy: false
     },
     {
       id: 6,
@@ -81,8 +76,7 @@ const Menu = () => {
       category: 'chicken',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_curry_chicken.jpg',
-      spicy: false,
-      vegetarian: false
+      spicy: false
     },
     {
       id: 7,
@@ -91,8 +85,7 @@ const Menu = () => {
       category: 'chicken',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Spicy_BBQ_chicken.jpg',
-      spicy: true,
-      vegetarian: false
+      spicy: true
     },
     {
       id: 8,
@@ -101,8 +94,7 @@ const Menu = () => {
       category: 'chicken',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Honey_chopped_spare_ribs.jpg',
-      spicy: false,
-      vegetarian: false
+      spicy: false
     },
     // Seafood
     {
@@ -112,8 +104,7 @@ const Menu = () => {
       category: 'seafood',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Hot_and_spicy_shrimp.jpg',
-      spicy: true,
-      vegetarian: false
+      spicy: true
     },
     {
       id: 10,
@@ -122,8 +113,7 @@ const Menu = () => {
       category: 'seafood',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_grilled_salmon.jpg',
-      spicy: false,
-      vegetarian: false
+      spicy: false
     },
     // Combos
     {
@@ -133,8 +123,7 @@ const Menu = () => {
       category: 'combos',
       popular: true,
       image: 'http://www.famousrotisserie.com/picture/product_Chicken_and_Shrimp_combo.jpg',
-      spicy: false,
-      vegetarian: false
+      spicy: false
     },
     {
       id: 12,
@@ -143,8 +132,7 @@ const Menu = () => {
       category: 'combos',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Chicken_and_shrimp_teriyaki.jpg',
-      spicy: false,
-      vegetarian: false
+      spicy: false
     },
     // Side Dishes
     {
@@ -154,8 +142,7 @@ const Menu = () => {
       category: 'sides',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Yellow_rice.jpg',
-      spicy: false,
-      vegetarian: true
+      spicy: false
     },
     {
       id: 14,
@@ -164,8 +151,7 @@ const Menu = () => {
       category: 'sides',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Steamed_green_bean.jpg',
-      spicy: false,
-      vegetarian: true
+      spicy: false
     },
     {
       id: 15,
@@ -174,8 +160,7 @@ const Menu = () => {
       category: 'sides',
       popular: true,
       image: 'http://www.famousrotisserie.com/picture/product_Mac_and_cheese.jpg',
-      spicy: false,
-      vegetarian: true
+      spicy: false
     },
     {
       id: 16,
@@ -184,8 +169,7 @@ const Menu = () => {
       category: 'sides',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Sweet_corn.jpg',
-      spicy: false,
-      vegetarian: true
+      spicy: false
     },
     {
       id: 17,
@@ -194,8 +178,7 @@ const Menu = () => {
       category: 'sides',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_mashed_potatoes.jpg',
-      spicy: false,
-      vegetarian: true
+      spicy: false
     },
     {
       id: 18,
@@ -204,8 +187,7 @@ const Menu = () => {
       category: 'sides',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Broccoli.jpg',
-      spicy: false,
-      vegetarian: true
+      spicy: false
     },
     {
       id: 19,
@@ -214,8 +196,7 @@ const Menu = () => {
       category: 'sides',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Fried_sweet_plantains.jpg',
-      spicy: false,
-      vegetarian: true
+      spicy: false
     },
     {
       id: 20,
@@ -224,8 +205,7 @@ const Menu = () => {
       category: 'sides',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Vegetable_noodles.jpg',
-      spicy: false,
-      vegetarian: true
+      spicy: false
     },
     {
       id: 21,
@@ -234,8 +214,7 @@ const Menu = () => {
       category: 'sides',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Cajun_potatoes.jpg',
-      spicy: false,
-      vegetarian: true
+      spicy: false
     },
     {
       id: 22,
@@ -244,8 +223,7 @@ const Menu = () => {
       category: 'sides',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Steamed_mix_vegetables.jpg',
-      spicy: false,
-      vegetarian: true
+      spicy: false
     },
     // Desserts
     {
@@ -255,8 +233,7 @@ const Menu = () => {
       category: 'desserts',
       popular: true,
       image: 'http://www.famousrotisserie.com/picture/product_New_York_cheese_cake.jpg',
-      spicy: false,
-      vegetarian: true
+      spicy: false
     },
     {
       id: 24,
@@ -265,8 +242,7 @@ const Menu = () => {
       category: 'desserts',
       popular: false,
       image: 'http://www.famousrotisserie.com/picture/product_Red_velvet_cake.jpg',
-      spicy: false,
-      vegetarian: true
+      spicy: false
     }
   ];
 
@@ -345,7 +321,7 @@ const Menu = () => {
           </div>
 
           {/* Menu Items Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {filteredItems.map((item, index) => (
               <motion.div
                 key={item.id}
@@ -374,11 +350,6 @@ const Menu = () => {
                       {item.spicy && (
                         <span className="bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded-full">
                           Spicy
-                        </span>
-                      )}
-                      {item.vegetarian && (
-                        <span className="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">
-                          Vegetarian
                         </span>
                       )}
                     </div>

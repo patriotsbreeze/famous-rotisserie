@@ -17,16 +17,11 @@ const Footer = () => {
     services: [
       { name: 'Menu', path: '/menu' },
       { name: 'Delivery', path: '/locations' },
-      { name: 'Takeout', path: '/contact' },
-      { name: 'Catering', path: '/catering' },
-      { name: 'Special Offers', path: '/offers' }
+      { name: 'Catering', path: '/catering' }
     ],
     support: [
       { name: 'Contact Us', path: '/contact' },
-      { name: 'FAQ', path: '/contact' },
-      { name: 'Order Status', path: '/contact' },
-      { name: 'Feedback', path: '/contact' },
-      { name: 'Help Center', path: '/contact' }
+      { name: 'FAQ', path: '/contact' }
     ]
   };
 
