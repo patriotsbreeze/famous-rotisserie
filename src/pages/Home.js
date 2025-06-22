@@ -46,7 +46,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="container-custom relative z-10 text-center">
+        <div className="container-custom relative z-10 text-center pt-16 sm:pt-0">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
