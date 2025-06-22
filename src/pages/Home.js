@@ -52,10 +52,10 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-5xl md:text-7xl font-playfair font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-playfair font-bold text-gray-900 mb-6">
               Welcome to <span className="text-gradient">Famous Rotisserie</span> & Grill
             </h1>
-            <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-8 leading-relaxed">
               Located in New York and Maryland, Famous Rotisserie & Grill has been a local 
               culinary institution since 2010. Our mission is to put a new spin on delivery.
             </p>
