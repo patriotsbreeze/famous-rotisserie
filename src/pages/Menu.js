@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Helmet } from 'react-helmet-async';
 import { Star, Clock, ArrowRight, Filter } from 'lucide-react';
+import DoorDashLogo from '../components/DoorDashLogo';
+import UberEatsLogo from '../components/UberEatsLogo';
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -26,10 +28,9 @@ const Menu = () => {
       id: 1,
       name: 'Pepper Chicken',
       description: 'Our signature pepper chicken with bold, flavorful seasoning throughout',
-      price: 12.99,
       category: 'chicken',
       popular: true,
-      image: '🍗',
+      image: 'http://www.famousrotisserie.com/picture/product_pepper_chicken.jpg',
       spicy: false,
       vegetarian: false
     },
@@ -37,21 +38,19 @@ const Menu = () => {
       id: 2,
       name: 'Blacken Chicken',
       description: 'Cajun-style blackened chicken with authentic spices and herbs',
-      price: 13.99,
       category: 'chicken',
       popular: false,
-      image: '🍗',
-      spicy: true,
+      image: 'http://www.famousrotisserie.com/picture/product_Blacken_chicken.jpg',
+      spicy: false,
       vegetarian: false
     },
     {
       id: 3,
       name: 'Orange Chicken',
       description: 'Sweet and tangy orange chicken with citrus glaze',
-      price: 12.99,
       category: 'chicken',
       popular: false,
-      image: '🍗',
+      image: 'http://www.famousrotisserie.com/picture/product_Orange_chicken.jpg',
       spicy: false,
       vegetarian: false
     },
@@ -59,10 +58,9 @@ const Menu = () => {
       id: 4,
       name: 'Signature Bourbon Chicken',
       description: 'Our famous bourbon chicken with rich, smoky flavor',
-      price: 13.99,
       category: 'chicken',
       popular: true,
-      image: '🍗',
+      image: 'http://www.famousrotisserie.com/picture/product_Signature_bourbon_chicken.jpg',
       spicy: false,
       vegetarian: false
     },
@@ -70,10 +68,9 @@ const Menu = () => {
       id: 5,
       name: 'Famous Teriyaki Chicken',
       description: 'Traditional teriyaki chicken with sweet soy glaze',
-      price: 12.99,
       category: 'chicken',
       popular: false,
-      image: '🍗',
+      image: 'http://www.famousrotisserie.com/picture/product_Famous_teriyaki_chicken.jpg',
       spicy: false,
       vegetarian: false
     },
@@ -81,21 +78,19 @@ const Menu = () => {
       id: 6,
       name: 'Curry Chicken',
       description: 'Aromatic curry chicken with authentic Indian spices',
-      price: 12.99,
       category: 'chicken',
       popular: false,
-      image: '🍗',
-      spicy: true,
+      image: 'http://www.famousrotisserie.com/picture/product_curry_chicken.jpg',
+      spicy: false,
       vegetarian: false
     },
     {
       id: 7,
       name: 'Spicy BBQ Chicken',
       description: 'Tangy BBQ chicken with a spicy kick',
-      price: 13.99,
       category: 'chicken',
       popular: false,
-      image: '🍗',
+      image: 'http://www.famousrotisserie.com/picture/product_Spicy_BBQ_chicken.jpg',
       spicy: true,
       vegetarian: false
     },
@@ -103,10 +98,9 @@ const Menu = () => {
       id: 8,
       name: 'Honey Chopped Spare Ribs',
       description: 'Tender spare ribs with honey glaze',
-      price: 14.99,
       category: 'chicken',
       popular: false,
-      image: '🍖',
+      image: 'http://www.famousrotisserie.com/picture/product_Honey_chopped_spare_ribs.jpg',
       spicy: false,
       vegetarian: false
     },
@@ -115,10 +109,9 @@ const Menu = () => {
       id: 9,
       name: 'Hot and Spicy Shrimp',
       description: 'Spicy shrimp with bold seasoning and heat',
-      price: 15.99,
       category: 'seafood',
       popular: false,
-      image: '🦐',
+      image: 'http://www.famousrotisserie.com/picture/product_Hot_and_spicy_shrimp.jpg',
       spicy: true,
       vegetarian: false
     },
@@ -126,10 +119,9 @@ const Menu = () => {
       id: 10,
       name: 'Grilled Salmon',
       description: 'Fresh grilled salmon with herbs and lemon',
-      price: 16.99,
       category: 'seafood',
       popular: false,
-      image: '🐟',
+      image: 'http://www.famousrotisserie.com/picture/product_grilled_salmon.jpg',
       spicy: false,
       vegetarian: false
     },
@@ -138,10 +130,9 @@ const Menu = () => {
       id: 11,
       name: 'Chicken and Shrimp Combo',
       description: 'Perfect combination of our chicken and shrimp',
-      price: 18.99,
       category: 'combos',
       popular: true,
-      image: '🍱',
+      image: 'http://www.famousrotisserie.com/picture/product_Chicken_and_Shrimp_combo.jpg',
       spicy: false,
       vegetarian: false
     },
@@ -149,10 +140,9 @@ const Menu = () => {
       id: 12,
       name: 'Chicken and Shrimp Teriyaki',
       description: 'Teriyaki chicken and shrimp combo',
-      price: 19.99,
       category: 'combos',
       popular: false,
-      image: '🍱',
+      image: 'http://www.famousrotisserie.com/picture/product_Chicken_and_shrimp_teriyaki.jpg',
       spicy: false,
       vegetarian: false
     },
@@ -161,10 +151,9 @@ const Menu = () => {
       id: 13,
       name: 'Yellow Rice',
       description: 'Flavorful yellow rice with aromatic spices',
-      price: 3.99,
       category: 'sides',
       popular: false,
-      image: '🍚',
+      image: 'http://www.famousrotisserie.com/picture/product_Yellow_rice.jpg',
       spicy: false,
       vegetarian: true
     },
@@ -172,10 +161,9 @@ const Menu = () => {
       id: 14,
       name: 'Steamed Green Beans',
       description: 'Fresh steamed green beans with seasoning',
-      price: 3.99,
       category: 'sides',
       popular: false,
-      image: '🥬',
+      image: 'http://www.famousrotisserie.com/picture/product_Steamed_green_bean.jpg',
       spicy: false,
       vegetarian: true
     },
@@ -183,10 +171,9 @@ const Menu = () => {
       id: 15,
       name: 'Mac and Cheese',
       description: 'Creamy mac and cheese made fresh daily',
-      price: 4.99,
       category: 'sides',
       popular: true,
-      image: '🧀',
+      image: 'http://www.famousrotisserie.com/picture/product_Mac_and_cheese.jpg',
       spicy: false,
       vegetarian: true
     },
@@ -194,10 +181,9 @@ const Menu = () => {
       id: 16,
       name: 'Sweet Corn',
       description: 'Sweet corn on the cob with butter',
-      price: 3.99,
       category: 'sides',
       popular: false,
-      image: '🌽',
+      image: 'http://www.famousrotisserie.com/picture/product_Sweet_corn.jpg',
       spicy: false,
       vegetarian: true
     },
@@ -205,10 +191,9 @@ const Menu = () => {
       id: 17,
       name: 'Mashed Potatoes',
       description: 'Creamy mashed potatoes with gravy',
-      price: 4.99,
       category: 'sides',
       popular: false,
-      image: '🥔',
+      image: 'http://www.famousrotisserie.com/picture/product_mashed_potatoes.jpg',
       spicy: false,
       vegetarian: true
     },
@@ -216,10 +201,9 @@ const Menu = () => {
       id: 18,
       name: 'Broccoli',
       description: 'Fresh steamed broccoli with seasoning',
-      price: 3.99,
       category: 'sides',
       popular: false,
-      image: '🥦',
+      image: 'http://www.famousrotisserie.com/picture/product_Broccoli.jpg',
       spicy: false,
       vegetarian: true
     },
@@ -227,10 +211,9 @@ const Menu = () => {
       id: 19,
       name: 'Fried Sweet Plantains',
       description: 'Sweet fried plantains with caramelized edges',
-      price: 4.99,
       category: 'sides',
       popular: false,
-      image: '🍌',
+      image: 'http://www.famousrotisserie.com/picture/product_Fried_sweet_plantains.jpg',
       spicy: false,
       vegetarian: true
     },
@@ -238,10 +221,9 @@ const Menu = () => {
       id: 20,
       name: 'Vegetable Noodles',
       description: 'Stir-fried vegetable noodles with fresh vegetables',
-      price: 5.99,
       category: 'sides',
       popular: false,
-      image: '🍜',
+      image: 'http://www.famousrotisserie.com/picture/product_Vegetable_noodles.jpg',
       spicy: false,
       vegetarian: true
     },
@@ -249,21 +231,19 @@ const Menu = () => {
       id: 21,
       name: 'Cajun Potatoes',
       description: 'Spicy Cajun-style potatoes with bold seasoning',
-      price: 4.99,
       category: 'sides',
       popular: false,
-      image: '🥔',
-      spicy: true,
+      image: 'http://www.famousrotisserie.com/picture/product_Cajun_potatoes.jpg',
+      spicy: false,
       vegetarian: true
     },
     {
       id: 22,
       name: 'Steamed Mix Vegetables',
       description: 'Fresh steamed mixed vegetables with seasoning',
-      price: 3.99,
       category: 'sides',
       popular: false,
-      image: '🥬',
+      image: 'http://www.famousrotisserie.com/picture/product_Steamed_mix_vegetables.jpg',
       spicy: false,
       vegetarian: true
     },
@@ -272,10 +252,9 @@ const Menu = () => {
       id: 23,
       name: 'New York Cheese Cake',
       description: 'Classic New York style cheesecake',
-      price: 5.99,
       category: 'desserts',
       popular: true,
-      image: '🍰',
+      image: 'http://www.famousrotisserie.com/picture/product_New_York_cheese_cake.jpg',
       spicy: false,
       vegetarian: true
     },
@@ -283,10 +262,9 @@ const Menu = () => {
       id: 24,
       name: 'Red Velvet Cake',
       description: 'Rich red velvet cake with cream cheese frosting',
-      price: 5.99,
       category: 'desserts',
       popular: false,
-      image: '🍰',
+      image: 'http://www.famousrotisserie.com/picture/product_Red_velvet_cake.jpg',
       spicy: false,
       vegetarian: true
     }
@@ -374,18 +352,25 @@ const Menu = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100"
+                className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 flex flex-col justify-between card-hover"
               >
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="text-4xl">{item.image}</div>
+                <div>
+                  <div className="relative mb-6">
+                    <img src={item.image} alt={item.name} className="w-full aspect-square object-cover rounded-lg mb-4" />
+                    {item.popular && (
+                      <span className="absolute top-0 right-0 bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                        <Star size={12} />
+                        Popular
+                      </span>
+                    )}
+                  </div>
+                  
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-xl font-playfair font-semibold text-gray-900">
+                      {item.name}
+                    </h3>
+                    
                     <div className="flex items-center gap-2">
-                      {item.popular && (
-                        <span className="bg-amber-100 text-amber-800 text-xs font-semibold px-2 py-1 rounded-full flex items-center gap-1">
-                          <Star size={12} />
-                          Popular
-                        </span>
-                      )}
                       {item.spicy && (
                         <span className="bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded-full">
                           Spicy
@@ -398,22 +383,16 @@ const Menu = () => {
                       )}
                     </div>
                   </div>
-                  
-                  <h3 className="text-xl font-playfair font-semibold text-gray-900 mb-2">
-                    {item.name}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+
+                  <p className="text-gray-600 mb-4 leading-relaxed h-12">
                     {item.description}
                   </p>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-amber-600">
-                      ${item.price}
-                    </span>
-                    <div className="flex items-center gap-2 text-sm text-gray-500">
-                      <Clock size={16} />
-                      <span>Fresh Daily</span>
-                    </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2 text-sm text-gray-500">
+                    <Clock size={16} />
+                    <span>Fresh Daily</span>
                   </div>
                 </div>
               </motion.div>
@@ -445,16 +424,25 @@ const Menu = () => {
                 rel="noopener noreferrer"
                 className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
               >
-                Order on DoorDash
-                <ArrowRight size={20} />
+                <DoorDashLogo />
+                <span className="font-semibold text-gray-900">Order DoorDash</span>
               </a>
-              <a 
-                href="tel:+15168728888" 
-                className="border-2 border-white text-white hover:bg-white hover:text-amber-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              <a
+                href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
               >
-                Call to Order
+                <UberEatsLogo />
+                <span className="font-semibold text-gray-900">Order UberEats</span>
               </a>
             </div>
+            <a 
+              href="tel:+15168728888" 
+              className="mt-6 inline-block border-2 border-white text-white hover:bg-white hover:text-amber-600 font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Call to Order
+            </a>
           </motion.div>
         </div>
       </section>

@@ -262,22 +262,16 @@ const Catering = () => {
                 Ready to Plan Your Event?
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Contact us to discuss your catering needs and get a custom quote for your event. 
-                We'll work with you to create the perfect menu and service plan.
+                Ready to make your event unforgettable? Contact us today to discuss your catering needs 
+                and let us create a custom menu that your guests will love.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Phone size={24} className="mr-3" />
-                  <span className="text-lg">Call us: (516) 872-8888</span>
-                </div>
-                <div className="flex items-center">
-                  <Mail size={24} className="mr-3" />
-                  <span className="text-lg">Email: famousrotisserie@gmail.com</span>
-                </div>
-                <div className="flex items-center">
-                  <Clock size={24} className="mr-3" />
-                  <span className="text-lg">Available 7 days a week</span>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  Get a Catering Quote
+                </a>
               </div>
             </motion.div>
             

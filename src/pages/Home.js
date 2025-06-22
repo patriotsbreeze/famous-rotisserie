@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Helmet } from 'react-helmet-async';
 import { Star, Clock, MapPin, Phone, ArrowRight, ChevronDown, Truck, Leaf, ChefHat, Award, Heart } from 'lucide-react';
+import DoorDashLogo from '../components/DoorDashLogo';
+import UberEatsLogo from '../components/UberEatsLogo';
 
 const Home = () => {
   const [ref, inView] = useInView({
@@ -31,33 +33,6 @@ const Home = () => {
       icon: <Truck size={32} className="text-amber-600" />,
       title: 'Fast Delivery',
       description: 'Quality meals at fast food prices with quick delivery to your door'
-    }
-  ];
-
-  const menuHighlights = [
-    {
-      name: 'Pepper Chicken',
-      description: 'Our signature pepper chicken with bold, flavorful seasoning throughout',
-      price: 'Starting at $12.99',
-      image: '🍗'
-    },
-    {
-      name: 'Signature Bourbon Chicken',
-      description: 'Our famous bourbon chicken with rich, smoky flavor',
-      price: 'Starting at $13.99',
-      image: '🍗'
-    },
-    {
-      name: 'Chicken and Shrimp Combo',
-      description: 'Perfect combination of our chicken and shrimp',
-      price: 'Starting at $18.99',
-      image: '🍱'
-    },
-    {
-      name: 'Fresh Sides',
-      description: 'Yellow rice, steamed green beans, mac and cheese, and more',
-      price: 'Starting at $3.99',
-      image: '🍽️'
     }
   ];
 
@@ -96,14 +71,28 @@ const Home = () => {
                 View Our Menu
                 <ArrowRight size={20} />
               </a>
-              <a
-                href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Order on DoorDash
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+                  style={{ minWidth: '220px', minHeight: '80px' }}
+                >
+                  <DoorDashLogo />
+                  <span className="font-semibold text-gray-900">Order DoorDash</span>
+                </a>
+                <a
+                  href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+                  style={{ minWidth: '220px', minHeight: '80px' }}
+                >
+                  <UberEatsLogo />
+                  <span className="font-semibold text-gray-900">Order UberEats</span>
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -204,63 +193,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Menu Highlights Section */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gray-900 mb-6">
-              Menu <span className="text-gradient">Highlights</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our most popular dishes, all made fresh daily with authentic flavors.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {menuHighlights.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 text-center card-hover"
-              >
-                <div className="text-4xl mb-4">{item.image}</div>
-                <h3 className="text-xl font-playfair font-semibold text-gray-900 mb-3">
-                  {item.name}
-                </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {item.description}
-                </p>
-                <div className="text-amber-600 font-bold">
-                  {item.price}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-center mt-12"
-          >
-            <a
-              href="/menu"
-              className="bg-amber-600 text-white hover:bg-amber-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center gap-2"
-            >
-              View Full Menu
-              <ArrowRight size={20} />
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Locations Section */}
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
@@ -288,15 +220,17 @@ const Home = () => {
               <div className="text-center">
                 <div className="text-4xl mb-4">🗽</div>
                 <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-4">New York</h3>
-                <div className="space-y-3 text-gray-600">
-                  <div>Green Acres Mall, Valley Stream</div>
-                  <div>Queens Center, Queens</div>
+                <div className="space-y-2 text-gray-600">
+                  <div>Valley Stream</div>
+                  <div>Elmhurst</div>
+                  <div>Jackson Heights</div>
+                  <div>Brooklyn</div>
                 </div>
                 <a
                   href="/locations"
                   className="mt-6 inline-block bg-amber-600 text-white hover:bg-amber-700 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
                 >
-                  View Details
+                  View NY Locations
                 </a>
               </div>
             </motion.div>
@@ -310,15 +244,14 @@ const Home = () => {
               <div className="text-center">
                 <div className="text-4xl mb-4">🏛️</div>
                 <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-4">Maryland</h3>
-                <div className="space-y-3 text-gray-600">
-                  <div>Westfield Wheaton Mall</div>
-                  <div>Silver Spring Area</div>
+                <div className="space-y-2 text-gray-600">
+                  <div>Wheaton</div>
                 </div>
                 <a
                   href="/locations"
                   className="mt-6 inline-block bg-amber-600 text-white hover:bg-amber-700 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
                 >
-                  View Details
+                  View MD Locations
                 </a>
               </div>
             </motion.div>
@@ -349,14 +282,17 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
               >
-                Order on DoorDash
-                <ArrowRight size={20} />
+                <DoorDashLogo />
+                <span className="font-semibold text-gray-900">Order DoorDash</span>
               </a>
               <a
-                href="tel:+1234567890"
-                className="border-2 border-white text-white hover:bg-white hover:text-amber-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
               >
-                Call to Order
+                <UberEatsLogo />
+                <span className="font-semibold text-gray-900">Order UberEats</span>
               </a>
             </div>
           </motion.div>

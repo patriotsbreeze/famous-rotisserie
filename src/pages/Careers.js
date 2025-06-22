@@ -294,11 +294,11 @@ const Careers = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Phone size={24} className="mr-3" />
-                  <span className="text-lg">Call us: (516) 872-8888</span>
+                   <a href="/contact" className="text-lg hover:underline">Contact us for hiring inquiries</a>
                 </div>
                 <div className="flex items-center">
                   <Mail size={24} className="mr-3" />
-                  <span className="text-lg">Email: famousrotisserie@gmail.com</span>
+                  <span className="text-lg">Email: famousrotisserie@aol.com</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin size={24} className="mr-3" />
@@ -322,6 +322,12 @@ const Careers = () => {
                   Don't miss the opportunity to be part of our growing team. 
                   We're looking for passionate individuals who want to make a difference.
                 </p>
+                 <a
+                  href="/contact"
+                  className="mt-6 inline-block bg-amber-600 text-white hover:bg-amber-700 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+                >
+                  Contact Us
+                </a>
               </div>
             </motion.div>
           </div>

@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Helmet } from 'react-helmet-async';
 import { Tag, MapPin, Clock, Download, Star, Percent } from 'lucide-react';
+import DoorDashLogo from '../components/DoorDashLogo';
+import UberEatsLogo from '../components/UberEatsLogo';
 
 const Offers = () => {
   const [ref, inView] = useInView({
@@ -13,7 +15,7 @@ const Offers = () => {
   const currentOffers = [
     {
       title: 'Green Acres Mall | 10% OFF',
-      location: '2024 Green Acres Mall, Valley Stream, NY 11581',
+      location: '2034 Green Acres Mall, Valley Stream, NY 11581',
       description: 'Save 10% on your order at our Green Acres Mall location. Valid for dine-in and takeout orders.',
       discount: '10% OFF',
       validUntil: 'Ongoing',
@@ -23,7 +25,7 @@ const Offers = () => {
         'Valid for dine-in and takeout orders',
         'Subject to availability'
       ],
-      downloadLink: 'offers/green_acres_10.pdf',
+      downloadLink: 'http://www.famousrotisserie.com/offers/green_acres_10.pdf',
       image: '🏪'
     }
   ];
@@ -31,15 +33,11 @@ const Offers = () => {
   const deliveryPartners = [
     {
       name: 'DoorDash',
-      description: 'Fast delivery to your door with DoorDash',
       link: 'https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US',
-      icon: '🚚'
     },
     {
       name: 'UberEats',
-      description: 'Quick delivery with UberEats',
-      link: 'https://www.ubereats.com/nyc-suburbs/food-delivery/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw',
-      icon: '🛵'
+      link: 'https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok',
     }
   ];
 
@@ -47,7 +45,7 @@ const Offers = () => {
     <div className="min-h-screen pt-20">
       <Helmet>
         <title>Offers & Coupons - Famous Rotisserie & Grill</title>
-        <meta name="description" content="Save money with our current offers and coupons. 10% OFF at Green Acres Mall location. Fast delivery available through DoorDash and UberEats." />
+        <meta name="description" content="Save money with our current offers and coupons. 10% OFF at Green Acres Mall location. Fast delivery available through our partners." />
       </Helmet>
 
       {/* Hero Section */}
@@ -141,7 +139,7 @@ const Offers = () => {
                   </a>
                   <a
                     href="tel:+15168728888"
-                    className="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
+                    className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
                   >
                     Call to Order
                   </a>
@@ -170,34 +168,40 @@ const Offers = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {deliveryPartners.map((partner, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-8 shadow-lg card-hover"
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-white rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center"
+            >
+              <a
+                href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+                style={{ minWidth: '220px', minHeight: '80px' }}
               >
-                <div className="text-center">
-                  <div className="text-6xl mb-6">{partner.icon}</div>
-                  <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-                    {partner.name}
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {partner.description}
-                  </p>
-                  <a
-                    href={partner.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-amber-600 text-white hover:bg-amber-700 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center gap-2"
-                  >
-                    Order Now
-                    <Tag size={20} />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
+                <DoorDashLogo />
+                <span className="font-semibold text-gray-900">Order DoorDash</span>
+              </a>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="bg-white rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center"
+            >
+              <a
+                href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+                style={{ minWidth: '220px', minHeight: '80px' }}
+              >
+                <UberEatsLogo />
+                <span className="font-semibold text-gray-900">Order UberEats</span>
+              </a>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -286,7 +290,7 @@ const Offers = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="offers/green_acres_10.pdf"
+                href="http://www.famousrotisserie.com/offers/green_acres_10.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
@@ -296,9 +300,15 @@ const Offers = () => {
               </a>
               <a
                 href="tel:+15168728888"
-                className="border-2 border-white text-white hover:bg-white hover:text-amber-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
               >
                 Call to Order
+              </a>
+              <a
+                href="/locations"
+                className="border-2 border-white text-white hover:bg-white hover:text-amber-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Find a Location
               </a>
             </div>
           </motion.div>

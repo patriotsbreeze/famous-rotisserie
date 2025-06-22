@@ -73,21 +73,6 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a
-              href="tel:+1234567890"
-              className="flex items-center space-x-2 text-amber-600 hover:text-amber-700 transition-colors"
-            >
-              <Phone size={20} />
-              <span className="font-medium">Order Now</span>
-            </a>
-            <a
-              href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
-              Order Delivery
-            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -124,22 +109,6 @@ const Navbar = () => {
                   </Link>
                 ))}
                 <div className="px-4 pt-4 border-t border-gray-200">
-                  <a
-                    href="tel:+1234567890"
-                    className="flex items-center space-x-2 text-amber-600 hover:text-amber-700 mb-4"
-                  >
-                    <Phone size={20} />
-                    <span className="font-medium">Order Now</span>
-                  </a>
-                  <a
-                    href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsOpen(false)}
-                    className="btn-primary w-full text-center"
-                  >
-                    Order Delivery
-                  </a>
                 </div>
               </div>
             </motion.div>

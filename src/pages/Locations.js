@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Helmet } from 'react-helmet-async';
 import { MapPin, Phone, Clock, Truck, Star } from 'lucide-react';
+import DoorDashLogo from '../components/DoorDashLogo';
+import UberEatsLogo from '../components/UberEatsLogo';
 
 const Locations = () => {
   const [ref, inView] = useInView({
@@ -16,17 +18,31 @@ const Locations = () => {
       areas: [
         {
           name: 'Green Acres Mall',
-          address: '2024 Green Acres Mall, Valley Stream, NY 11581',
-          hours: '10:00am to 9:30pm (Mon to Sat), 10:00am to 7:00pm (Sun)',
-          description: 'Our flagship location serving the Valley Stream area with fresh Mexican rostisado style chicken.',
-          features: ['Delivery Available', 'Takeout', 'Fresh Daily', 'Local Ingredients']
+          address: '2034 Green Acres Mall, Valley Stream, NY 11581',
+          floor: 'Floor 2',
+          phone: '(516) 872-8888',
+          hours: 'Mon-Thu: 11am-9:30pm, Fri: 11am-9:30pm, Sat: 10am-9:30pm, Sun: 10am-7pm',
         },
         {
           name: 'Queens Center',
-          address: '90-15 Queens Blvd, Queens, NY 11373',
-          hours: '10:00am to 9:30pm (Mon to Sat), 11:00am to 8:00pm (Sun)',
-          description: 'Serving the Queens area with our signature dishes and fast delivery service.',
-          features: ['Fast Delivery', 'Corporate Catering', 'Fresh Ingredients', 'Mexican Style']
+          address: '90-15 Queens Blvd, Elmhurst, NY 11373',
+          floor: 'Floor 1',
+          phone: '(929) 463-3990',
+          hours: 'Mon-Sat: 10am-9:30pm, Sun: 11am-8pm',
+        },
+        {
+          name: 'Jackson Heights',
+          address: '95-51 Roosevelt Ave, Jackson Heights, NY 11372',
+          floor: '',
+          phone: '(347) 527-2851',
+          hours: 'Mon-Sun: 11am-10pm',
+        },
+        {
+          name: 'Coney Island',
+          address: '1525 Mermaid Ave, Brooklyn, NY 11224',
+          floor: '',
+          phone: '(347) 587-1486',
+          hours: 'Mon-Sat: 11:30am-9:30pm, Sun: Closed',
         }
       ],
       image: '🗽'
@@ -35,11 +51,11 @@ const Locations = () => {
       state: 'Maryland',
       areas: [
         {
-          name: 'Westfield Wheaton Mall',
+          name: 'Westfield Wheaton',
           address: '11160 Veirs Mill Rd, Wheaton, MD 20902',
-          hours: '10:00am to 9:30pm (Mon to Sat), 11:00am to 7:00pm (Sun)',
-          description: 'Bringing our authentic Mexican cooking methods to the Maryland community.',
-          features: ['Local Delivery', 'Fresh Daily', 'No Preservatives', 'Quality Meals']
+          floor: 'Floor 2',
+          phone: '(301) 933-4078',
+          hours: 'Mon-Sat: 10am-9:30pm, Sun: Closed',
         }
       ],
       image: '🏛️'
@@ -150,30 +166,33 @@ const Locations = () => {
                         <div className="flex items-start gap-3">
                           <MapPin size={20} className="text-amber-600 mt-1 flex-shrink-0" />
                           <div>
-                            <p className="font-semibold text-gray-900">Address</p>
-                            <p className="text-gray-600">{area.address}</p>
+                            <a 
+                              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(area.address)}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="font-semibold text-gray-900 hover:text-amber-600"
+                            >
+                              {area.address}
+                            </a>
+                            {area.floor && <p className="text-gray-500 text-sm">{area.floor}</p>}
                           </div>
                         </div>
                         
                         <div className="flex items-start gap-3">
+                          <Phone size={20} className="text-amber-600 mt-1 flex-shrink-0" />
+                          <div>
+                             <p className="font-semibold text-gray-900">Phone</p>
+                            <a href={`tel:${area.phone}`} className="text-gray-600 hover:text-amber-600">{area.phone}</a>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-3">
                           <Clock size={20} className="text-amber-600 mt-1 flex-shrink-0" />
                           <div>
                             <p className="font-semibold text-gray-900">Hours</p>
-                            <p className="text-gray-600">{area.hours}</p>
+                            <p className="text-gray-600 text-sm">{area.hours}</p>
                           </div>
                         </div>
-                      </div>
-
-                      <div className="grid grid-cols-2 gap-2 mb-6">
-                        {area.features.map((feature, featureIndex) => (
-                          <div
-                            key={featureIndex}
-                            className="flex items-center gap-2 text-sm text-gray-600"
-                          >
-                            <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                            {feature}
-                          </div>
-                        ))}
                       </div>
 
                       <div className="flex flex-col sm:flex-row gap-3">
@@ -181,17 +200,27 @@ const Locations = () => {
                           href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-amber-600 text-white hover:bg-amber-700 font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
+                          className="flex-1 bg-white hover:bg-gray-50 border border-gray-200 py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2"
                         >
-                          Order Delivery
+                          <DoorDashLogo />
+                          <span className="font-semibold text-gray-900">Order DoorDash</span>
                         </a>
                         <a
-                          href="tel:+15168728888"
-                          className="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
+                          href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 bg-white hover:bg-gray-50 border border-gray-200 py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2"
+                        >
+                          <UberEatsLogo />
+                          <span className="font-semibold text-gray-900">Order UberEats</span>
+                        </a>
+                      </div>
+                       <a
+                          href={`tel:${area.phone}`}
+                          className="mt-3 bg-amber-600 text-white hover:bg-amber-700 font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center block"
                         >
                           Call to Order
                         </a>
-                      </div>
                     </motion.div>
                   ))}
                 </div>
@@ -263,14 +292,25 @@ const Locations = () => {
                 href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center p-4 flex-1 h-20"
               >
-                Order on DoorDash
+                <DoorDashLogo />
               </a>
-              <a href="tel:+15168728888" className="border-2 border-white text-white hover:bg-white hover:text-amber-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Call to Order
+              <a
+                href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center p-4 flex-1 h-20"
+              >
+                <UberEatsLogo />
               </a>
             </div>
+             <a
+               href="/contact"
+               className="mt-6 inline-block border-2 border-white text-white hover:bg-white hover:text-amber-600 font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+             >
+               Call a Location
+             </a>
           </motion.div>
         </div>
       </section>

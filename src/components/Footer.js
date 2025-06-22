@@ -60,14 +60,14 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Phone size={16} className="mr-3 text-amber-500" />
-                  <a href="tel:+1234567890" className="hover:text-amber-400 transition-colors">
-                    (123) 456-7890
+                  <a href="tel:+15168728888" className="hover:text-amber-400 transition-colors">
+                    (516) 872-8888
                   </a>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Mail size={16} className="mr-3 text-amber-500" />
-                  <a href="mailto:info@famousrotisserie.com" className="hover:text-amber-400 transition-colors">
-                    info@famousrotisserie.com
+                  <a href="mailto:famousrotisserie@aol.com" className="hover:text-amber-400 transition-colors">
+                    famousrotisserie@aol.com
                   </a>
                 </div>
               </div>
@@ -149,18 +149,17 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Service Hours</h4>
             <div className="space-y-2 text-gray-300">
               <div className="flex justify-between">
-                <span>Monday - Friday</span>
-                <span>11:00 AM - 10:00 PM</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Saturday</span>
-                <span>11:00 AM - 11:00 PM</span>
+                <span>Monday - Saturday</span>
+                <span>Hours vary by location</span>
               </div>
               <div className="flex justify-between">
                 <span>Sunday</span>
-                <span>12:00 PM - 9:00 PM</span>
+                <span>Hours vary by location</span>
               </div>
             </div>
+            <p className="text-gray-400 text-sm mt-3">
+              Please check specific location details.
+            </p>
           </motion.div>
 
           {/* Social Links */}
@@ -196,6 +195,19 @@ const Footer = () => {
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
               </a>
+              <div className="mt-2">
+                <a
+                  href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-amber-400 hover:text-amber-300 transition-colors"
+                >
+                  <span className="mr-2">Order on Uber Eats</span>
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -217,15 +229,6 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="flex space-x-6 text-sm text-gray-400"
             >
-              <Link to="/contact" className="hover:text-amber-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/contact" className="hover:text-amber-400 transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/contact" className="hover:text-amber-400 transition-colors">
-                Accessibility
-              </Link>
             </motion.div>
           </div>
         </div>

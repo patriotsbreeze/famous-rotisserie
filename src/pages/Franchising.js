@@ -291,22 +291,24 @@ const Franchising = () => {
                 Ready to Join Us?
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                For more information about franchise opportunities, please contact us. 
-                We're looking forward to discussing how you can become part of the 
-                Famous Rotisserie & Grill family.
+                Contact us today to learn more about our franchise opportunities and become part of our success story.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  Contact Us
+                </a>
+              </div>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Mail size={24} className="mr-3" />
-                  <span className="text-lg">Email: famousrotisserie@gmail.com</span>
+                  <span className="text-lg">Email: famousrotisserie@aol.com</span>
                 </div>
-                <div className="flex items-center">
+                 <div className="flex items-center">
                   <Phone size={24} className="mr-3" />
-                  <span className="text-lg">Phone: (516) 872-8888</span>
-                </div>
-                <div className="flex items-center">
-                  <MapPin size={24} className="mr-3" />
-                  <span className="text-lg">Headquarters: Long Island, NY</span>
+                  <a href="/contact" className="text-lg hover:underline">Contact us for phone inquiries</a>
                 </div>
               </div>
             </motion.div>

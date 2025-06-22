@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Truck, Star } from 'lucide-react';
+import DoorDashLogo from '../components/DoorDashLogo';
+import UberEatsLogo from '../components/UberEatsLogo';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -30,7 +32,7 @@ const Contact = () => {
     {
       icon: <Mail size={32} className="text-amber-600" />,
       title: 'Email',
-      details: 'famousrotisserie@gmail.com',
+      details: 'famousrotisserie@aol.com',
       description: 'Send us an email for inquiries and feedback'
     },
     {
@@ -44,36 +46,41 @@ const Contact = () => {
   const locations = [
     {
       name: 'Green Acres Mall',
-      address: '2024 Green Acres Mall, Valley Stream, NY 11581',
-      hours: '10:00am to 9:30pm (Mon to Sat), 10:00am to 7:00pm (Sun)',
+      address: '2034 Green Acres Mall, Valley Stream, NY 11581',
       phone: '(516) 872-8888'
     },
     {
       name: 'Queens Center',
-      address: '90-15 Queens Blvd, Queens, NY 11373',
-      hours: '10:00am to 9:30pm (Mon to Sat), 11:00am to 8:00pm (Sun)',
-      phone: '(516) 872-8888'
+      address: '90-15 Queens Blvd, Elmhurst, NY 11373',
+      phone: '(929) 463-3990'
     },
     {
-      name: 'Westfield Wheaton Mall',
+      name: 'Jackson Heights',
+      address: '95-51 Roosevelt Ave, Jackson Heights, NY 11372',
+      phone: '(347) 527-2851'
+    },
+    {
+      name: 'Coney Island',
+      address: '1525 Mermaid Ave, Brooklyn, NY 11224',
+      phone: '(347) 587-1486'
+    },
+    {
+      name: 'Westfield Wheaton',
       address: '11160 Veirs Mill Rd, Wheaton, MD 20902',
-      hours: '10:00am to 9:30pm (Mon to Sat), 11:00am to 7:00pm (Sun)',
-      phone: '(516) 872-8888'
+      phone: '(301) 933-4078'
     }
   ];
 
   const deliveryOptions = [
     {
       name: 'DoorDash',
-      description: 'Fast delivery to your door',
+      description: 'Fast delivery to your door with DoorDash',
       link: 'https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US',
-      icon: '🚚'
     },
     {
       name: 'UberEats',
       description: 'Quick delivery with UberEats',
-      link: 'https://www.ubereats.com/nyc-suburbs/food-delivery/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw',
-      icon: '🛵'
+      link: 'https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok',
     }
   ];
 
@@ -127,7 +134,7 @@ const Contact = () => {
     <div className="min-h-screen pt-20">
       <Helmet>
         <title>Contact Us - Famous Rotisserie & Grill</title>
-        <meta name="description" content="Contact Famous Rotisserie & Grill. Call (516) 872-8888 or email famousrotisserie@gmail.com. Locations in New York and Maryland." />
+        <meta name="description" content="Contact Famous Rotisserie & Grill. Call (516) 872-8888 or email famousrotisserie@aol.com. Locations in New York and Maryland." />
       </Helmet>
 
       {/* Hero Section */}
@@ -229,15 +236,14 @@ const Contact = () => {
                     <MapPin size={20} className="text-amber-600 mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-semibold text-gray-900">Address</p>
-                      <p className="text-gray-600 text-sm">{location.address}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <Clock size={20} className="text-amber-600 mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="font-semibold text-gray-900">Hours</p>
-                      <p className="text-gray-600 text-sm">{location.hours}</p>
+                      <a 
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.address)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 text-sm hover:text-amber-600"
+                      >
+                        {location.address}
+                      </a>
                     </div>
                   </div>
                   
@@ -245,27 +251,35 @@ const Contact = () => {
                     <Phone size={20} className="text-amber-600 mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-semibold text-gray-900">Phone</p>
-                      <p className="text-gray-600 text-sm">{location.phone}</p>
+                      <a href={`tel:${location.phone}`} className="text-gray-600 text-sm hover:text-amber-600">{location.phone}</a>
                     </div>
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col sm:flex-row gap-3 mt-4">
                   <a
                     href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-amber-600 text-white hover:bg-amber-700 font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
+                    className="flex-1 bg-white hover:bg-gray-50 border border-gray-200 py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center"
                   >
-                    Order Delivery
+                    <DoorDashLogo />
                   </a>
                   <a
+                    href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-white hover:bg-gray-50 border border-gray-200 py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center"
+                  >
+                    <UberEatsLogo />
+                  </a>
+                </div>
+                 <a
                     href={`tel:${location.phone}`}
-                    className="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
+                    className="mt-3 bg-amber-600 text-white hover:bg-amber-700 font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center block"
                   >
                     Call to Order
                   </a>
-                </div>
               </motion.div>
             ))}
           </div>
@@ -290,32 +304,40 @@ const Contact = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {deliveryOptions.map((option, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 text-center card-hover"
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-white rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center"
+            >
+              <a
+                href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+                style={{ minWidth: '220px', minHeight: '80px' }}
               >
-                <div className="text-6xl mb-6">{option.icon}</div>
-                <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-                  {option.name}
-                </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {option.description}
-                </p>
-                <a
-                  href={option.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-amber-600 text-white hover:bg-amber-700 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center gap-2"
-                >
-                  <Truck size={20} />
-                  Order Now
-                </a>
-              </motion.div>
-            ))}
+                <DoorDashLogo />
+                <span className="font-semibold text-gray-900">Order DoorDash</span>
+              </a>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="bg-white rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center"
+            >
+              <a
+                href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+                style={{ minWidth: '220px', minHeight: '80px' }}
+              >
+                <UberEatsLogo />
+                <span className="font-semibold text-gray-900">Order UberEats</span>
+              </a>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -379,20 +401,30 @@ const Contact = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+15168728888"
-                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Call to Order
-              </a>
-              <a
                 href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-white text-white hover:bg-white hover:text-amber-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-white hover:bg-gray-100 py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center"
+                style={{ minWidth: '220px', minHeight: '80px' }}
               >
-                Order Delivery
+                <DoorDashLogo />
+              </a>
+              <a
+                href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white hover:bg-gray-100 py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center"
+                style={{ minWidth: '220px', minHeight: '80px' }}
+              >
+                <UberEatsLogo />
               </a>
             </div>
+            <a 
+              href="tel:+15168728888" 
+              className="mt-6 inline-block border-2 border-white text-white hover:bg-white hover:text-amber-600 font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Call to Order
+            </a>
           </motion.div>
         </div>
       </section>
