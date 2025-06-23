@@ -356,7 +356,7 @@ const Menu = () => {
                     </div>
                   </div>
 
-                  <p className="text-gray-600 mb-4 leading-relaxed h-12">
+                  <p className="text-gray-600 mb-4 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
