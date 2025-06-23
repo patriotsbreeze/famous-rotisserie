@@ -284,41 +284,6 @@ const Locations = () => {
           </div>
         </div>
       </section>
-
-      {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-amber-600 to-orange-600 text-white">
-        <div className="container-custom text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl mx-auto"
-          >
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6">
-              Ready to Order?
-            </h2>
-            <p className="text-xl mb-8 opacity-90">
-              Get fresh, delicious food delivered to your door from any of our locations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/locations"
-                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
-              >
-                <Truck size={20} />
-                Order Online
-              </Link>
-              <a
-                href="tel:516-872-8888"
-                className="border-2 border-white text-white hover:bg-white hover:text-amber-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-              >
-                <Phone size={20} />
-                Call to Order
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 };
