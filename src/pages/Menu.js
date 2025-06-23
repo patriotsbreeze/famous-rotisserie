@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Helmet } from 'react-helmet-async';
-import { Star, Clock, ArrowRight, Filter } from 'lucide-react';
+import { Star, Clock, ArrowRight, Filter, Truck, Phone } from 'lucide-react';
 import DoorDashLogo from '../components/DoorDashLogo';
 import UberEatsLogo from '../components/UberEatsLogo';
 
@@ -30,7 +31,7 @@ const Menu = () => {
       description: 'Our signature pepper chicken with bold, flavorful seasoning throughout',
       category: 'chicken',
       popular: true,
-      image: 'http://www.famousrotisserie.com/picture/product_pepper_chicken.jpg',
+      image: '/images/product_pepper_chicken.jpg',
       spicy: false
     },
     {
@@ -39,7 +40,7 @@ const Menu = () => {
       description: 'Cajun-style blackened chicken with authentic spices and herbs',
       category: 'chicken',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Blacken_chicken.jpg',
+      image: '/images/product_Blacken_chicken.jpg',
       spicy: false
     },
     {
@@ -48,7 +49,7 @@ const Menu = () => {
       description: 'Sweet and tangy orange chicken with citrus glaze',
       category: 'chicken',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Orange_chicken.jpg',
+      image: '/images/product_Orange_chicken.jpg',
       spicy: false
     },
     {
@@ -57,7 +58,7 @@ const Menu = () => {
       description: 'Our famous bourbon chicken with rich, smoky flavor',
       category: 'chicken',
       popular: true,
-      image: 'http://www.famousrotisserie.com/picture/product_Signature_bourbon_chicken.jpg',
+      image: '/images/product_Signature_bourbon_chicken.jpg',
       spicy: false
     },
     {
@@ -66,7 +67,7 @@ const Menu = () => {
       description: 'Traditional teriyaki chicken with sweet soy glaze',
       category: 'chicken',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Famous_teriyaki_chicken.jpg',
+      image: '/images/product_Famous_teriyaki_chicken.jpg',
       spicy: false
     },
     {
@@ -75,7 +76,7 @@ const Menu = () => {
       description: 'Aromatic curry chicken with authentic Indian spices',
       category: 'chicken',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_curry_chicken.jpg',
+      image: '/images/product_curry_chicken.jpg',
       spicy: false
     },
     {
@@ -84,7 +85,7 @@ const Menu = () => {
       description: 'Tangy BBQ chicken with a spicy kick',
       category: 'chicken',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Spicy_BBQ_chicken.jpg',
+      image: '/images/product_Spicy_BBQ_chicken.jpg',
       spicy: true
     },
     {
@@ -93,7 +94,7 @@ const Menu = () => {
       description: 'Tender spare ribs with honey glaze',
       category: 'chicken',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Honey_chopped_spare_ribs.jpg',
+      image: '/images/product_Honey_chopped_spare_ribs.jpg',
       spicy: false
     },
     // Seafood
@@ -103,7 +104,7 @@ const Menu = () => {
       description: 'Spicy shrimp with bold seasoning and heat',
       category: 'seafood',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Hot_and_spicy_shrimp.jpg',
+      image: '/images/product_Hot_and_spicy_shrimp.jpg',
       spicy: true
     },
     {
@@ -112,7 +113,7 @@ const Menu = () => {
       description: 'Fresh grilled salmon with herbs and lemon',
       category: 'seafood',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_grilled_salmon.jpg',
+      image: '/images/product_grilled_salmon.jpg',
       spicy: false
     },
     // Combos
@@ -122,7 +123,7 @@ const Menu = () => {
       description: 'Perfect combination of our chicken and shrimp',
       category: 'combos',
       popular: true,
-      image: 'http://www.famousrotisserie.com/picture/product_Chicken_and_Shrimp_combo.jpg',
+      image: '/images/product_Chicken_and_Shrimp_combo.jpg',
       spicy: false
     },
     {
@@ -131,7 +132,7 @@ const Menu = () => {
       description: 'Teriyaki chicken and shrimp combo',
       category: 'combos',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Chicken_and_shrimp_teriyaki.jpg',
+      image: '/images/product_Chicken_and_shrimp_teriyaki.jpg',
       spicy: false
     },
     // Side Dishes
@@ -141,7 +142,7 @@ const Menu = () => {
       description: 'Flavorful yellow rice with aromatic spices',
       category: 'sides',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Yellow_rice.jpg',
+      image: '/images/product_Yellow_rice.jpg',
       spicy: false
     },
     {
@@ -150,7 +151,7 @@ const Menu = () => {
       description: 'Fresh steamed green beans with seasoning',
       category: 'sides',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Steamed_green_bean.jpg',
+      image: '/images/product_Steamed_green_bean.jpg',
       spicy: false
     },
     {
@@ -159,7 +160,7 @@ const Menu = () => {
       description: 'Creamy mac and cheese made fresh daily',
       category: 'sides',
       popular: true,
-      image: 'http://www.famousrotisserie.com/picture/product_Mac_and_cheese.jpg',
+      image: '/images/product_Mac_and_cheese.jpg',
       spicy: false
     },
     {
@@ -168,7 +169,7 @@ const Menu = () => {
       description: 'Sweet corn on the cob with butter',
       category: 'sides',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Sweet_corn.jpg',
+      image: '/images/product_Sweet_corn.jpg',
       spicy: false
     },
     {
@@ -177,7 +178,7 @@ const Menu = () => {
       description: 'Creamy mashed potatoes with gravy',
       category: 'sides',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_mashed_potatoes.jpg',
+      image: '/images/product_mashed_potatoes.jpg',
       spicy: false
     },
     {
@@ -186,7 +187,7 @@ const Menu = () => {
       description: 'Fresh steamed broccoli with seasoning',
       category: 'sides',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Broccoli.jpg',
+      image: '/images/product_Broccoli.jpg',
       spicy: false
     },
     {
@@ -195,7 +196,7 @@ const Menu = () => {
       description: 'Sweet fried plantains with caramelized edges',
       category: 'sides',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Fried_sweet_plantains.jpg',
+      image: '/images/product_Fried_sweet_plantains.jpg',
       spicy: false
     },
     {
@@ -204,7 +205,7 @@ const Menu = () => {
       description: 'Stir-fried vegetable noodles with fresh vegetables',
       category: 'sides',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Vegetable_noodles.jpg',
+      image: '/images/product_Vegetable_noodles.jpg',
       spicy: false
     },
     {
@@ -213,7 +214,7 @@ const Menu = () => {
       description: 'Spicy Cajun-style potatoes with bold seasoning',
       category: 'sides',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Cajun_potatoes.jpg',
+      image: '/images/product_Cajun_potatoes.jpg',
       spicy: false
     },
     {
@@ -222,7 +223,7 @@ const Menu = () => {
       description: 'Fresh steamed mixed vegetables with seasoning',
       category: 'sides',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Steamed_mix_vegetables.jpg',
+      image: '/images/product_Steamed_mix_vegetables.jpg',
       spicy: false
     },
     // Desserts
@@ -232,7 +233,7 @@ const Menu = () => {
       description: 'Classic New York style cheesecake',
       category: 'desserts',
       popular: true,
-      image: 'http://www.famousrotisserie.com/picture/product_New_York_cheese_cake.jpg',
+      image: '/images/product_New_York_cheese_cake.jpg',
       spicy: false
     },
     {
@@ -241,7 +242,7 @@ const Menu = () => {
       description: 'Rich red velvet cake with cream cheese frosting',
       category: 'desserts',
       popular: false,
-      image: 'http://www.famousrotisserie.com/picture/product_Red_velvet_cake.jpg',
+      image: '/images/product_Red_velvet_cake.jpg',
       spicy: false
     }
   ];
@@ -388,32 +389,23 @@ const Menu = () => {
               All our food is made fresh daily with no preservatives or emulsifiers. 
               Quality meals at fast food prices!
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/locations"
                 className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
               >
-                <DoorDashLogo />
-                <span className="font-semibold text-gray-900">Order DoorDash</span>
-              </a>
+                <Truck size={20} />
+                Order Online
+              </Link>
               <a
-                href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+                href="tel:516-872-8888"
+                className="border-2 border-white text-white hover:bg-white hover:text-amber-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
               >
-                <UberEatsLogo />
-                <span className="font-semibold text-gray-900">Order UberEats</span>
+                <Phone size={20} />
+                Call to Order
               </a>
             </div>
-            <a 
-              href="tel:+15168728888" 
-              className="mt-6 inline-block border-2 border-white text-white hover:bg-white hover:text-amber-600 font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Call to Order
-            </a>
           </motion.div>
         </div>
       </section>

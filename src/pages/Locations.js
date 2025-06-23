@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Helmet } from 'react-helmet-async';
@@ -22,6 +23,8 @@ const Locations = () => {
           floor: 'Floor 2',
           phone: '(516) 872-8888',
           hours: 'Mon-Thu: 11am-9:30pm, Fri: 11am-9:30pm, Sat: 10am-9:30pm, Sun: 10am-7pm',
+          doorDashUrl: 'https://www.doordash.com/store/famous-rotisserie-&-grill-valley-stream-1238290/1810671/',
+          uberEatsUrl: 'https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok'
         },
         {
           name: 'Queens Center',
@@ -29,6 +32,8 @@ const Locations = () => {
           floor: 'Floor 1',
           phone: '(929) 463-3990',
           hours: 'Mon-Sat: 10am-9:30pm, Sun: 11am-8pm',
+          doorDashUrl: 'https://www.doordash.com/store/famous-rotisserie-&-grill-valley-stream-1238290/1810671/',
+          uberEatsUrl: 'https://www.ubereats.com/store/famous-rotisserie-and-grill/up40GtpkV_K4--emHO4xlA?diningMode=DELIVERY&sc=SEARCH_SUGGESTION'
         },
         {
           name: 'Jackson Heights',
@@ -36,6 +41,8 @@ const Locations = () => {
           floor: '',
           phone: '(347) 527-2851',
           hours: 'Mon-Sun: 11am-10pm',
+          doorDashUrl: 'https://www.doordash.com/store/famous-rotisserie-and-grill-jackson-heights-25048455/23184577/?event_type=autocomplete&pickup=false',
+          uberEatsUrl: 'https://www.ubereats.com/store/famous-rotisserie-and-grill/up40GtpkV_K4--emHO4xlA?surfaceName='
         },
         {
           name: 'Coney Island',
@@ -43,6 +50,8 @@ const Locations = () => {
           floor: '',
           phone: '(347) 587-1486',
           hours: 'Mon-Sat: 11:30am-9:30pm, Sun: Closed',
+          doorDashUrl: 'https://www.doordash.com/store/famous-rotisserie-&-grill-brooklyn-34310413/70704346/?cursor=eyJzdG9yZV9wcmltYXJ5X3ZlcnRpY2FsX2lkcyI6WzEsNCwxMDAzMzNdfQ==&pickup=false',
+          uberEatsUrl: 'https://www.ubereats.com/store/famous-rotisserie-%26-grill/MA3iNzReSxKVpRkgmm1zBw?surfaceName='
         }
       ],
       image: '🗽'
@@ -56,6 +65,8 @@ const Locations = () => {
           floor: 'Floor 2',
           phone: '(301) 933-4078',
           hours: 'Mon-Sat: 10am-9:30pm, Sun: Closed',
+          doorDashUrl: 'https://www.doordash.com/store/famous-rotisserie-&-grille-silver-spring-1780195/2229309/?event_type=autocomplete&pickup=false',
+          uberEatsUrl: 'https://www.ubereats.com/store/famous-rotisserie-and-grill/PLLelB8nRUKuQaKBwuxu-g?diningMode=DELIVERY&surfaceName='
         }
       ],
       image: '🏛️'
@@ -195,26 +206,28 @@ const Locations = () => {
                         </div>
                       </div>
 
-                      <div className="flex flex-col sm:flex-row gap-3">
-                        <a
-                          href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex-1 bg-white hover:bg-gray-50 border border-gray-200 py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2"
-                        >
-                          <DoorDashLogo />
-                          <span className="font-semibold text-gray-900">Order DoorDash</span>
-                        </a>
-                        <a
-                          href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex-1 bg-white hover:bg-gray-50 border border-gray-200 py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2"
-                        >
-                          <UberEatsLogo />
-                          <span className="font-semibold text-gray-900">Order UberEats</span>
-                        </a>
-                      </div>
+                      {area.name === 'Queens Center' ? null : (
+                        <div className="flex flex-col sm:flex-row gap-3">
+                          <a
+                            href={area.doorDashUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 bg-white hover:bg-gray-50 border border-gray-200 py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2"
+                          >
+                            <DoorDashLogo />
+                            <span className="font-semibold text-gray-900">Order DoorDash</span>
+                          </a>
+                          <a
+                            href={area.uberEatsUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 bg-white hover:bg-gray-50 border border-gray-200 py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2"
+                          >
+                            <UberEatsLogo />
+                            <span className="font-semibold text-gray-900">Order UberEats</span>
+                          </a>
+                        </div>
+                      )}
                        <a
                           href={`tel:${area.phone}`}
                           className="mt-3 bg-amber-600 text-white hover:bg-amber-700 font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center block"
@@ -288,23 +301,19 @@ const Locations = () => {
               Get fresh, delicious food delivered to your door from any of our locations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/locations"
                 className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
               >
-                <DoorDashLogo />
-                <span className="font-semibold text-gray-900">Order DoorDash</span>
-              </a>
+                <Truck size={20} />
+                Order Online
+              </Link>
               <a
-                href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+                href="tel:516-872-8888"
+                className="border-2 border-white text-white hover:bg-white hover:text-amber-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
               >
-                <UberEatsLogo />
-                <span className="font-semibold text-gray-900">Order UberEats</span>
+                <Phone size={20} />
+                Call to Order
               </a>
             </div>
           </motion.div>

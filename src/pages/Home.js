@@ -71,28 +71,13 @@ const Home = () => {
                 View Our Menu
                 <ArrowRight size={20} />
               </a>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
-                  style={{ minWidth: '220px', minHeight: '80px' }}
-                >
-                  <DoorDashLogo />
-                  <span className="font-semibold text-gray-900">Order DoorDash</span>
-                </a>
-                <a
-                  href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
-                  style={{ minWidth: '220px', minHeight: '80px' }}
-                >
-                  <UberEatsLogo />
-                  <span className="font-semibold text-gray-900">Order UberEats</span>
-                </a>
-              </div>
+              <Link
+                to="/locations"
+                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+              >
+                <Truck size={20} />
+                Order Online
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -276,23 +261,19 @@ const Home = () => {
               Quality meals at fast food prices!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/locations"
                 className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
               >
-                <DoorDashLogo />
-                <span className="font-semibold text-gray-900">Order DoorDash</span>
-              </a>
+                <Truck size={20} />
+                Order Online
+              </Link>
               <a
-                href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+                href="tel:516-872-8888"
+                className="border-2 border-white text-white hover:bg-white hover:text-amber-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
               >
-                <UberEatsLogo />
-                <span className="font-semibold text-gray-900">Order UberEats</span>
+                <Phone size={20} />
+                Call to Order
               </a>
             </div>
           </motion.div>
