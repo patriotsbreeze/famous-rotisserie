@@ -36,7 +36,7 @@ const About = () => {
   const serviceAreas = [
     {
       state: 'New York',
-      cities: ['Valley Stream', 'Elmhurst', 'Jackson Heights', 'Brooklyn']
+      cities: ['Valley Stream', 'Elmhurst', 'Jackson Heights']
     },
     {
       state: 'Maryland',

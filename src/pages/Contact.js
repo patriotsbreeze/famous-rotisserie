@@ -66,13 +66,6 @@ const Contact = () => {
       uberEatsUrl: 'https://www.ubereats.com/store/famous-rotisserie-and-grill/up40GtpkV_K4--emHO4xlA?surfaceName='
     },
     {
-      name: 'Coney Island',
-      address: '1525 Mermaid Ave, Brooklyn, NY 11224',
-      phone: '(347) 587-1486',
-      doorDashUrl: 'https://www.doordash.com/store/famous-rotisserie-&-grill-brooklyn-34310413/70704346/?cursor=eyJzdG9yZV9wcmltYXJ5X3ZlcnRpY2FsX2lkcyI6WzEsNCwxMDAzMzNdfQ==&pickup=false',
-      uberEatsUrl: 'https://www.ubereats.com/store/famous-rotisserie-%26-grill/MA3iNzReSxKVpRkgmm1zBw?surfaceName='
-    },
-    {
       name: 'Westfield Wheaton',
       address: '11160 Veirs Mill Rd, Wheaton, MD 20902',
       phone: '(301) 933-4078',

@@ -63,13 +63,18 @@ const Catering = () => {
   const addOns = [
     {
       name: 'Cheese Cake',
-      price: '$3.49 per slice',
+      price: '$4.49 per slice',
       description: 'Add delicious cheesecake to your catering order'
     },
     {
       name: 'Chocolate Cake',
-      price: '$3.49 per slice',
+      price: '$4.49 per slice',
       description: 'Rich chocolate cake for dessert lovers'
+    },
+    {
+      name: 'Red Velvet Cake',
+      price: '$4.49 per slice',
+      description: 'Classic red velvet cake with cream cheese frosting'
     }
   ];
 
@@ -213,7 +218,7 @@ const Catering = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {addOns.map((addon, index) => (
               <motion.div
                 key={index}
@@ -243,7 +248,7 @@ const Catering = () => {
             className="text-center mt-12 p-6 bg-red-50 rounded-2xl max-w-2xl mx-auto"
           >
             <p className="text-gray-700 font-semibold">
-              <span className="text-red-600">Note:</span> Salmon and shrimp are not part of the catering entrées.
+              <span className="text-red-600">Note:</span> Salmon and shrimp cost extra.
             </p>
           </motion.div>
         </div>

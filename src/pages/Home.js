@@ -202,7 +202,6 @@ const Home = () => {
                   <div>Valley Stream</div>
                   <div>Elmhurst</div>
                   <div>Jackson Heights</div>
-                  <div>Brooklyn</div>
                 </div>
                 <a
                   href="/locations"
