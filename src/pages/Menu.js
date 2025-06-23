@@ -31,7 +31,7 @@ const Menu = () => {
       description: 'Our signature pepper chicken with bold, flavorful seasoning throughout',
       category: 'chicken',
       popular: true,
-      image: '/images/product_pepper_chicken.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_pepper_chicken.jpg',
       spicy: false
     },
     {
@@ -40,7 +40,7 @@ const Menu = () => {
       description: 'Cajun-style blackened chicken with authentic spices and herbs',
       category: 'chicken',
       popular: false,
-      image: '/images/product_Blacken_chicken.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Blacken_chicken.jpg',
       spicy: false
     },
     {
@@ -49,7 +49,7 @@ const Menu = () => {
       description: 'Sweet and tangy orange chicken with citrus glaze',
       category: 'chicken',
       popular: false,
-      image: '/images/product_Orange_chicken.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Orange_chicken.jpg',
       spicy: false
     },
     {
@@ -58,7 +58,7 @@ const Menu = () => {
       description: 'Our famous bourbon chicken with rich, smoky flavor',
       category: 'chicken',
       popular: true,
-      image: '/images/product_Signature_bourbon_chicken.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Signature_bourbon_chicken.jpg',
       spicy: false
     },
     {
@@ -67,7 +67,7 @@ const Menu = () => {
       description: 'Traditional teriyaki chicken with sweet soy glaze',
       category: 'chicken',
       popular: false,
-      image: '/images/product_Famous_teriyaki_chicken.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Famous_teriyaki_chicken.jpg',
       spicy: false
     },
     {
@@ -76,7 +76,7 @@ const Menu = () => {
       description: 'Aromatic curry chicken with authentic Indian spices',
       category: 'chicken',
       popular: false,
-      image: '/images/product_curry_chicken.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_curry_chicken.jpg',
       spicy: false
     },
     {
@@ -85,7 +85,7 @@ const Menu = () => {
       description: 'Tangy BBQ chicken with a spicy kick',
       category: 'chicken',
       popular: false,
-      image: '/images/product_Spicy_BBQ_chicken.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Spicy_BBQ_chicken.jpg',
       spicy: true
     },
     {
@@ -94,7 +94,7 @@ const Menu = () => {
       description: 'Tender spare ribs with honey glaze',
       category: 'chicken',
       popular: false,
-      image: '/images/product_Honey_chopped_spare_ribs.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Honey_chopped_spare_ribs.jpg',
       spicy: false
     },
     // Seafood
@@ -104,7 +104,7 @@ const Menu = () => {
       description: 'Spicy shrimp with bold seasoning and heat',
       category: 'seafood',
       popular: false,
-      image: '/images/product_Hot_and_spicy_shrimp.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Hot_and_spicy_shrimp.jpg',
       spicy: true
     },
     {
@@ -113,7 +113,7 @@ const Menu = () => {
       description: 'Fresh grilled salmon with herbs and lemon',
       category: 'seafood',
       popular: false,
-      image: '/images/product_grilled_salmon.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_grilled_salmon.jpg',
       spicy: false
     },
     // Combos
@@ -123,7 +123,7 @@ const Menu = () => {
       description: 'Perfect combination of our chicken and shrimp',
       category: 'combos',
       popular: true,
-      image: '/images/product_Chicken_and_Shrimp_combo.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Chicken_and_Shrimp_combo.jpg',
       spicy: false
     },
     {
@@ -132,7 +132,7 @@ const Menu = () => {
       description: 'Teriyaki chicken and shrimp combo',
       category: 'combos',
       popular: false,
-      image: '/images/product_Chicken_and_shrimp_teriyaki.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Chicken_and_shrimp_teriyaki.jpg',
       spicy: false
     },
     // Side Dishes
@@ -142,7 +142,7 @@ const Menu = () => {
       description: 'Flavorful yellow rice with aromatic spices',
       category: 'sides',
       popular: false,
-      image: '/images/product_Yellow_rice.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Yellow_rice.jpg',
       spicy: false
     },
     {
@@ -151,7 +151,7 @@ const Menu = () => {
       description: 'Fresh steamed green beans with seasoning',
       category: 'sides',
       popular: false,
-      image: '/images/product_Steamed_green_bean.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Steamed_green_bean.jpg',
       spicy: false
     },
     {
@@ -160,7 +160,7 @@ const Menu = () => {
       description: 'Creamy mac and cheese made fresh daily',
       category: 'sides',
       popular: true,
-      image: '/images/product_Mac_and_cheese.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Mac_and_cheese.jpg',
       spicy: false
     },
     {
@@ -169,7 +169,7 @@ const Menu = () => {
       description: 'Sweet corn on the cob with butter',
       category: 'sides',
       popular: false,
-      image: '/images/product_Sweet_corn.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Sweet_corn.jpg',
       spicy: false
     },
     {
@@ -178,7 +178,7 @@ const Menu = () => {
       description: 'Creamy mashed potatoes with gravy',
       category: 'sides',
       popular: false,
-      image: '/images/product_mashed_potatoes.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_mashed_potatoes.jpg',
       spicy: false
     },
     {
@@ -187,7 +187,7 @@ const Menu = () => {
       description: 'Fresh steamed broccoli with seasoning',
       category: 'sides',
       popular: false,
-      image: '/images/product_Broccoli.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Broccoli.jpg',
       spicy: false
     },
     {
@@ -196,7 +196,7 @@ const Menu = () => {
       description: 'Sweet fried plantains with caramelized edges',
       category: 'sides',
       popular: false,
-      image: '/images/product_Fried_sweet_plantains.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Fried_sweet_plantains.jpg',
       spicy: false
     },
     {
@@ -205,7 +205,7 @@ const Menu = () => {
       description: 'Stir-fried vegetable noodles with fresh vegetables',
       category: 'sides',
       popular: false,
-      image: '/images/product_Vegetable_noodles.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Vegetable_noodles.jpg',
       spicy: false
     },
     {
@@ -214,7 +214,7 @@ const Menu = () => {
       description: 'Spicy Cajun-style potatoes with bold seasoning',
       category: 'sides',
       popular: false,
-      image: '/images/product_Cajun_potatoes.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Cajun_potatoes.jpg',
       spicy: false
     },
     {
@@ -223,7 +223,7 @@ const Menu = () => {
       description: 'Fresh steamed mixed vegetables with seasoning',
       category: 'sides',
       popular: false,
-      image: '/images/product_Steamed_mix_vegetables.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Steamed_mix_vegetables.jpg',
       spicy: false
     },
     // Desserts
@@ -233,7 +233,7 @@ const Menu = () => {
       description: 'Classic New York style cheesecake',
       category: 'desserts',
       popular: true,
-      image: '/images/product_New_York_cheese_cake.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_New_York_cheese_cake.jpg',
       spicy: false
     },
     {
@@ -242,7 +242,7 @@ const Menu = () => {
       description: 'Rich red velvet cake with cream cheese frosting',
       category: 'desserts',
       popular: false,
-      image: '/images/product_Red_velvet_cake.jpg',
+      image: process.env.PUBLIC_URL + '/images/product_Red_velvet_cake.jpg',
       spicy: false
     }
   ];
