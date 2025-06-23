@@ -97,6 +97,15 @@ const Menu = () => {
       image: process.env.PUBLIC_URL + '/images/product_Honey_chopped_spare_ribs.jpg',
       spicy: false
     },
+    {
+      id: 25,
+      name: 'Buffalo Wings',
+      description: 'Classic buffalo wings tossed in spicy sauce, served with a side of ranch or blue cheese.',
+      category: 'chicken',
+      popular: false,
+      image: process.env.PUBLIC_URL + '/images/buffalo_wings.jpg',
+      spicy: false
+    },
     // Seafood
     {
       id: 9,
@@ -233,7 +242,7 @@ const Menu = () => {
       description: 'Classic New York style cheesecake',
       category: 'desserts',
       popular: true,
-      image: process.env.PUBLIC_URL + '/images/product_New_York_cheese_cake.jpg',
+      image: process.env.PUBLIC_URL + '/images/cheesecake.JPEG',
       spicy: false
     },
     {
@@ -242,7 +251,7 @@ const Menu = () => {
       description: 'Rich red velvet cake with cream cheese frosting',
       category: 'desserts',
       popular: false,
-      image: process.env.PUBLIC_URL + '/images/product_Red_velvet_cake.jpg',
+      image: process.env.PUBLIC_URL + '/images/red_velvet_cake.JPEG',
       spicy: false
     }
   ];

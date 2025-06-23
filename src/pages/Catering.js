@@ -227,7 +227,15 @@ const Catering = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 text-center"
               >
-                <div className="text-4xl mb-4">🍰</div>
+                <div className="text-4xl mb-4">
+                  {addon.name === 'Cheese Cake' ? (
+                    <img src="/images/cheesecake.JPEG" alt="Cheesecake" className="mx-auto rounded-lg object-cover" style={{height: '80px', width: '80px'}} />
+                  ) : addon.name === 'Red Velvet Cake' ? (
+                    <img src="/images/red_velvet_cake.JPEG" alt="Red Velvet Cake" className="mx-auto rounded-lg object-cover" style={{height: '80px', width: '80px'}} />
+                  ) : (
+                    '🍰'
+                  )}
+                </div>
                 <h3 className="text-xl font-playfair font-semibold text-gray-900 mb-2">
                   {addon.name}
                 </h3>
