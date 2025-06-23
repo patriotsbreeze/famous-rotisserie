@@ -292,25 +292,21 @@ const Locations = () => {
                 href="https://www.doordash.com/store/famous-rotisserie---grill-valley-stream-1238290/en-US"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center p-4 flex-1 h-20"
+                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
               >
                 <DoorDashLogo />
+                <span className="font-semibold text-gray-900">Order DoorDash</span>
               </a>
               <a
                 href="https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center p-4 flex-1 h-20"
+                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
               >
                 <UberEatsLogo />
+                <span className="font-semibold text-gray-900">Order UberEats</span>
               </a>
             </div>
-             <a
-               href="/contact"
-               className="mt-6 inline-block border-2 border-white text-white hover:bg-white hover:text-amber-600 font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-             >
-               Call a Location
-             </a>
           </motion.div>
         </div>
       </section>

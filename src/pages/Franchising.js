@@ -41,19 +41,6 @@ const Franchising = () => {
     'Ability to follow proven processes and systems'
   ];
 
-  const growthAreas = [
-    {
-      region: 'Long Island, NY',
-      description: 'The original Famous Rotisserie & Grill in Long Island, NY is both geographically and emotionally at the heart of it all.',
-      status: 'Current Market'
-    },
-    {
-      region: 'East Coast Expansion',
-      description: 'We plan to expand the Famous Rotisserie & Grill brand into prime markets throughout the east coast area in US.',
-      status: 'Future Growth'
-    }
-  ];
-
   return (
     <div className="min-h-screen pt-20">
       <Helmet>
@@ -231,104 +218,52 @@ const Franchising = () => {
         </div>
       </section>
 
-      {/* Growth Areas Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gray-900 mb-6">
-              Growth <span className="text-gradient">Areas</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our strategic expansion focuses on prime markets throughout the east coast area in US.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {growthAreas.map((area, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-8 shadow-lg card-hover"
-              >
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-playfair font-bold text-gray-900">
-                    {area.region}
-                  </h3>
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                    area.status === 'Current Market' 
-                      ? 'bg-green-100 text-green-800' 
-                      : 'bg-blue-100 text-blue-800'
-                  }`}>
-                    {area.status}
-                  </span>
-                </div>
-                <p className="text-gray-600 leading-relaxed">
-                  {area.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-r from-amber-600 to-orange-600 text-white">
-        <div className="container-custom">
+      {/* CTA Section */}
+      <section className="bg-amber-600">
+        <div className="container-custom py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              className="text-white"
             >
-              <h2 className="text-4xl font-playfair font-bold mb-6">
+              <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-4">
                 Ready to Join Us?
               </h2>
-              <p className="text-xl mb-8 opacity-90">
+              <p className="text-lg text-amber-100 mb-8">
                 Contact us today to learn more about our franchise opportunities and become part of our success story.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="space-y-4">
                 <a
                   href="/contact"
-                  className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="inline-block bg-white text-amber-600 hover:bg-amber-50 font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   Contact Us
                 </a>
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Mail size={24} className="mr-3" />
-                  <span className="text-lg">Email: famousrotisserie@aol.com</span>
+                <div className="flex items-center gap-4">
+                  <Mail size={20} className="text-amber-200" />
+                  <span className="text-amber-100">Email: famousrotisserie@aol.com</span>
                 </div>
-                 <div className="flex items-center">
-                  <Phone size={24} className="mr-3" />
-                  <a href="/contact" className="text-lg hover:underline">Contact us for phone inquiries</a>
+                <div className="flex items-center gap-4">
+                  <Phone size={20} className="text-amber-200" />
+                  <span className="text-amber-100">Contact us for phone inquiries</span>
                 </div>
               </div>
             </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="bg-white rounded-2xl p-8 shadow-lg text-center"
             >
-              <div className="bg-white text-amber-600 p-8 rounded-2xl">
-                <div className="text-6xl mb-6">🚀</div>
-                <h3 className="text-2xl font-playfair font-bold mb-4">
-                  Start Your Journey
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Join a brand that's growing and making a difference in communities 
-                  across the east coast with quality food and exceptional service.
-                </p>
-              </div>
+              <div className="text-6xl mb-4">🚀</div>
+              <h3 className="text-2xl font-playfair font-bold text-gradient mb-3">
+                Start Your Journey
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Join a brand that's growing and making a difference in communities across the east coast with quality food and exceptional service.
+              </p>
             </motion.div>
           </div>
         </div>
