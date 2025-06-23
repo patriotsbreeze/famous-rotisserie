@@ -84,33 +84,6 @@ const Contact = () => {
     }
   ];
 
-  const faqs = [
-    {
-      question: 'What are your hours of operation?',
-      answer: 'We are open 10:00am to 9:30pm Monday to Saturday, and 10:00am to 7:00pm on Sundays at most locations. Please check specific location hours as they may vary.'
-    },
-    {
-      question: 'Do you offer delivery?',
-      answer: 'Yes! We offer delivery through DoorDash and UberEats. You can also call us directly to place delivery orders.'
-    },
-    {
-      question: 'What makes your chicken special?',
-      answer: 'Our chicken is cooked in the Mexican "rostisado" style with our special marinade and multi-hour cooking process, making it tender and juicy with a prominent citrus flavor.'
-    },
-    {
-      question: 'Do you use fresh ingredients?',
-      answer: 'Yes! Everything on our menu is made from scratch and on-site each and every day. We use locally sourced produce and ingredients whenever possible and in season.'
-    },
-    {
-      question: 'Do you offer catering?',
-      answer: 'Yes! We offer professional catering services for corporate parties, wedding receptions, birthdays, backyard barbecues and more. Contact us for more information.'
-    },
-    {
-      question: 'Are you hiring?',
-      answer: 'We are currently looking for enthusiastic, self-motivated leaders to join our team. Contact us for current job opportunities.'
-    }
-  ];
-
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
@@ -338,47 +311,6 @@ const Contact = () => {
                 <span className="font-semibold text-gray-900">Order UberEats</span>
               </a>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gray-900 mb-6">
-              Frequently Asked <span className="text-gradient">Questions</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find answers to common questions about our menu, delivery, and services.
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl p-8 shadow-lg"
-                >
-                  <h3 className="text-xl font-playfair font-semibold text-gray-900 mb-4 flex items-start gap-3">
-                    <MessageCircle size={24} className="text-amber-600 mt-1 flex-shrink-0" />
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed ml-12">
-                    {faq.answer}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

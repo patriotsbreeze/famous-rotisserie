@@ -21,7 +21,6 @@ const Footer = () => {
     ],
     support: [
       { name: 'Contact Us', path: '/contact' },
-      { name: 'FAQ', path: '/contact' }
     ]
   };
 
