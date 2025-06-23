@@ -32,7 +32,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-brand-bg'
       }`}
     >
       <div className="container-custom">
@@ -41,29 +41,29 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-playfair font-bold text-gradient"
+              className="text-2xl font-playfair font-bold text-brand-orange"
             >
               Famous Rotisserie & Grill
             </motion.div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`relative font-medium transition-colors duration-300 ${
+                className={`relative font-medium transition-colors duration-300 text-lg ${
                   location.pathname === item.path
-                    ? 'text-amber-600'
-                    : 'text-gray-700 hover:text-amber-600'
+                    ? 'text-brand-dark'
+                    : 'text-slate-600 hover:text-brand-dark'
                 }`}
               >
                 {item.name}
                 {location.pathname === item.path && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-amber-600"
+                    className="absolute -bottom-2 left-0 right-0 h-0.5 bg-brand-orange"
                   />
                 )}
               </Link>
@@ -73,7 +73,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

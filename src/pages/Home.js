@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Helmet } from 'react-helmet-async';
-import { Star, Clock, MapPin, Phone, ArrowRight, ChevronDown, Truck, Leaf, ChefHat, Award, Heart } from 'lucide-react';
+import { Star, Clock, MapPin, Phone, ArrowRight, Truck, Leaf, ChefHat, Award, Heart } from 'lucide-react';
 import DoorDashLogo from '../components/DoorDashLogo';
 import UberEatsLogo from '../components/UberEatsLogo';
 
@@ -37,43 +36,37 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Helmet>
-        <title>Famous Rotisserie & Grill - Fresh Mexican Style Chicken</title>
-        <meta name="description" content="Famous Rotisserie & Grill - Fresh Mexican 'rostisado' style chicken in New York and Maryland. Delivery and takeout with fresh, locally-sourced ingredients since 2010." />
-      </Helmet>
-
+    <div className="min-h-screen bg-brand-bg">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="container-custom relative z-10 text-center pt-16 sm:pt-0">
+      <section className="relative min-h-screen flex items-center justify-center">
+        <div className="container-custom relative z-10 text-center py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-playfair font-bold text-gray-900 mb-6">
-              Welcome to <span className="text-gradient">Famous Rotisserie</span> & Grill
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-playfair font-bold text-brand-dark mb-8">
+              Welcome to <span className="text-brand-orange">Famous Rotisserie</span> & Grill
             </h1>
-            <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Located in New York and Maryland, Famous Rotisserie & Grill has been a local 
-              culinary institution since 2010. Our mission is to put a new spin on delivery.
+            <p className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-6 leading-relaxed">
+              Located in New York and Maryland, Famous Rotisserie & Grill has been a local culinary
+              institution since 2010. Our mission is to put a new spin on delivery.
             </p>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-              We do this by taking nothing but the freshest ingredients and assembling them 
-              in unique ways to deliver absolutely delicious food to you.
+             <p className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-12 leading-relaxed">
+              We do this by taking nothing but the freshest ingredients and assembling them in
+              unique ways to deliver absolutely delicious food to you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/menu"
-                className="bg-amber-600 text-white hover:bg-amber-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+              <Link
+                to="/menu"
+                className="bg-brand-orange text-white hover:bg-orange-600 font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
               >
                 View Our Menu
                 <ArrowRight size={20} />
-              </a>
+              </Link>
               <Link
                 to="/locations"
-                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+                className="bg-white text-brand-dark hover:bg-slate-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 border border-slate-200"
               >
                 <Truck size={20} />
                 Order Online

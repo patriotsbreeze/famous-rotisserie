@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import About from './pages/About';
@@ -15,12 +15,7 @@ import Careers from './pages/Careers';
 function App() {
   return (
     <div className="App">
-      <Helmet>
-        <title>Famous Rotisserie & Grill - Fresh Mexican Style Chicken</title>
-        <meta name="description" content="Famous Rotisserie & Grill - Fresh Mexican 'rostisado' style chicken in New York and Maryland. Delivery and takeout with fresh, locally-sourced ingredients since 2010." />
-        <link rel="canonical" href="https://famousrotisserie.com" />
-      </Helmet>
-      
+      <ScrollToTop />
       <Navbar />
       <main>
         <Routes>

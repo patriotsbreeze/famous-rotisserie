@@ -30,7 +30,10 @@ module.exports = {
           700: '#a16207',
           800: '#854d0e',
           900: '#713f12',
-        }
+        },
+        'brand-dark': '#1e293b',
+        'brand-orange': '#f97316',
+        'brand-bg': '#f8fafc',
       },
       fontFamily: {
         'playfair': ['Playfair Display', 'serif'],
