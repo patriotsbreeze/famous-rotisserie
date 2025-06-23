@@ -33,21 +33,6 @@ const About = () => {
     }
   ];
 
-  const chickenVarieties = [
-    {
-      name: 'Traditional Hand-Breaded',
-      description: 'Classic breaded chicken with our signature seasoning'
-    },
-    {
-      name: 'Citrus Grilled',
-      description: 'Fresh citrus-marinated grilled chicken'
-    },
-    {
-      name: 'Extra Crispy',
-      description: 'Coming soon - our new extra crispy option'
-    }
-  ];
-
   const serviceAreas = [
     {
       state: 'New York',
@@ -168,45 +153,6 @@ const About = () => {
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
                   {value.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Chicken Varieties Section */}
-      <section className="py-16 bg-white">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gray-900 mb-6">
-              Our Chicken <span className="text-gradient">Varieties</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer a variety of chicken recipes to satisfy every taste preference.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {chickenVarieties.map((variety, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 text-center card-hover"
-              >
-                <div className="text-4xl mb-4">🍗</div>
-                <h3 className="text-xl font-playfair font-semibold text-gray-900 mb-3">
-                  {variety.name}
-                </h3>
-                <p className="text-gray-600">
-                  {variety.description}
                 </p>
               </motion.div>
             ))}
