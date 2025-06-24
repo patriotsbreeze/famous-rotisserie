@@ -103,7 +103,7 @@ const Menu = () => {
       description: 'Classic buffalo wings tossed in spicy sauce, served with a side of ranch or blue cheese.',
       category: 'chicken',
       popular: false,
-      image: process.env.PUBLIC_URL + '/images/buffalo_wings.jpg',
+      image: process.env.PUBLIC_URL + '/images/buffalo_wing.jpg',
       spicy: false
     },
     // Seafood

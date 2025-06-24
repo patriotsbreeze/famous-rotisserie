@@ -150,29 +150,29 @@ const Home = () => {
               </p>
             </div>
             <div className="flex flex-col gap-6 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
                 className="relative w-full"
-              >
+            >
                 <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 flex flex-col items-center">
                   <img src={process.env.PUBLIC_URL + '/images/meals/roasted_chicken_meal.JPG'} alt="Roasted Chicken Meal" className="rounded-2xl shadow-xl w-full max-w-xs object-cover mb-6" style={{maxHeight: '180px'}} />
-                  <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-                    Mexican Rostisado Style
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    Our chicken is cooked in the Mexican "rostisado" style. With our special marinade 
-                    and multi-hour cooking process, the chicken we serve is tender and juicy with a 
-                    prominent citrus flavor profile.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed font-semibold">
-                    The end result is a quality meal at a fast food price.
-                  </p>
-                </div>
-              </motion.div>
-            </div>
+                <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
+                  Mexican Rostisado Style
+                </h3>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Our chicken is cooked in the Mexican "rostisado" style. With our special marinade 
+                  and multi-hour cooking process, the chicken we serve is tender and juicy with a 
+                  prominent citrus flavor profile.
+                </p>
+                <p className="text-gray-700 leading-relaxed font-semibold">
+                  The end result is a quality meal at a fast food price.
+                </p>
+              </div>
+            </motion.div>
           </div>
+        </div>
         </div>
       </section>
 
