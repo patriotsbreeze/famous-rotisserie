@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import { Star, Clock, MapPin, Phone, ArrowRight, Truck, Leaf, ChefHat, Award, Heart } from 'lucide-react';
 import DoorDashLogo from '../components/DoorDashLogo';
 import UberEatsLogo from '../components/UberEatsLogo';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
   const [ref, inView] = useInView({
@@ -37,6 +38,10 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-brand-bg">
+      <Helmet>
+        <title>Home - Famous Rotisserie & Grill</title>
+        <link rel="icon" type="image/png" href={process.env.PUBLIC_URL + '/images/famous-rotisserie-logo.png'} />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
         <div className="container-custom relative z-10 text-center py-20">
