@@ -22,7 +22,7 @@ const Locations = () => {
           address: '2034 Green Acres Mall, Valley Stream, NY 11581',
           floor: 'Floor 2',
           phone: '(516) 872-8888',
-          hours: 'Mon-Thu: 11am-9:30pm, Fri: 11am-9:30pm, Sat: 10am-9:30pm, Sun: 10am-7pm',
+          hours: 'Mon-Sat: 11am-9pm, Sun: 11am-7pm',
           doorDashUrl: 'https://www.doordash.com/store/famous-rotisserie-&-grill-valley-stream-1238290/1810671/',
           uberEatsUrl: 'https://www.ubereats.com/store/famous-rotisserie-and-grill/tJIpd_xcSiqVXbHi3s4xRw?utm_source=wok'
         },
@@ -31,7 +31,7 @@ const Locations = () => {
           address: '90-15 Queens Blvd, Elmhurst, NY 11373',
           floor: 'Floor 1',
           phone: '(929) 463-3990',
-          hours: 'Mon-Sat: 10am-9:30pm, Sun: 11am-8pm',
+          hours: 'Mon-Sat: 10am-9pm, Sun: 11am-8pm',
           doorDashUrl: 'https://www.doordash.com/store/famous-rotisserie-&-grill-valley-stream-1238290/1810671/',
           uberEatsUrl: 'https://www.ubereats.com/store/famous-rotisserie-and-grill/up40GtpkV_K4--emHO4xlA?diningMode=DELIVERY&sc=SEARCH_SUGGESTION'
         },
@@ -40,7 +40,7 @@ const Locations = () => {
           address: '95-51 Roosevelt Ave, Jackson Heights, NY 11372',
           floor: '',
           phone: '(347) 527-2851',
-          hours: 'Mon-Sun: 11am-10pm',
+          hours: 'Mon-Sun: 11am-9:30pm',
           doorDashUrl: 'https://www.doordash.com/store/famous-rotisserie-and-grill-jackson-heights-25048455/23184577/?event_type=autocomplete&pickup=false',
           uberEatsUrl: 'https://www.ubereats.com/store/famous-rotisserie-and-grill/up40GtpkV_K4--emHO4xlA?surfaceName='
         }
@@ -55,7 +55,7 @@ const Locations = () => {
           address: '11160 Veirs Mill Rd, Wheaton, MD 20902',
           floor: 'Floor 2',
           phone: '(301) 933-4078',
-          hours: 'Mon-Sat: 10am-9:30pm, Sun: Closed',
+          hours: 'Mon-Thurs: 10am-8pm, Fri-Sat: 10am-9pm, Sun: 11am-7pm',
           doorDashUrl: 'https://www.doordash.com/store/famous-rotisserie-&-grille-silver-spring-1780195/2229309/?event_type=autocomplete&pickup=false',
           uberEatsUrl: 'https://www.ubereats.com/store/famous-rotisserie-and-grill/PLLelB8nRUKuQaKBwuxu-g?diningMode=DELIVERY&surfaceName='
         }
