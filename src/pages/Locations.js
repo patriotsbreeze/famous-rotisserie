@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -82,6 +82,18 @@ const Locations = () => {
     }
   ];
 
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100); // slight delay to ensure rendering
+      }
+    }
+  }, []);
+
   return (
     <div className="min-h-screen pt-20">
       <Helmet>
@@ -131,6 +143,7 @@ const Locations = () => {
             {locations.map((location, locationIndex) => (
               <motion.div
                 key={location.state}
+                id={location.state === 'New York' ? 'new-york' : location.state === 'Maryland' ? 'maryland' : undefined}
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: locationIndex * 0.2 }}

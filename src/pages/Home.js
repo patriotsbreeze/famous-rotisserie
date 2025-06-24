@@ -48,6 +48,9 @@ const Home = () => {
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-playfair font-bold text-brand-dark mb-8">
               Welcome to <span className="text-brand-orange">Famous Rotisserie</span> & Grill
             </h1>
+            <div className="flex justify-center mb-8">
+              <img src={process.env.PUBLIC_URL + '/images/meals/multiple_meals.JPG'} alt="Famous Rotisserie Meals" className="rounded-3xl shadow-xl w-full max-w-2xl object-cover" style={{maxHeight: '340px'}} />
+            </div>
             <p className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-6 leading-relaxed">
               Located in New York and Maryland, Famous Rotisserie & Grill has been a local culinary
               institution since 2010. Our mission is to put a new spin on delivery.
@@ -123,11 +126,7 @@ const Home = () => {
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div>
               <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gray-900 mb-6">
                 Fresh Food for <span className="text-gradient">Everyone</span>
               </h2>
@@ -144,29 +143,30 @@ const Home = () => {
                 Everything on our menu is made from scratch and on-site each and every day. 
                 Whenever possible and in season, locally sourced produce and ingredients are used.
               </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-3xl p-8">
-                <div className="text-6xl mb-6">🍗</div>
-                <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
-                  Mexican Rostisado Style
-                </h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Our chicken is cooked in the Mexican "rostisado" style. With our special marinade 
-                  and multi-hour cooking process, the chicken we serve is tender and juicy with a 
-                  prominent citrus flavor profile.
-                </p>
-                <p className="text-gray-700 leading-relaxed font-semibold">
-                  The end result is a quality meal at a fast food price.
-                </p>
-              </div>
-            </motion.div>
+            </div>
+            <div className="flex flex-col gap-6 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="relative w-full"
+              >
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 flex flex-col items-center">
+                  <img src={process.env.PUBLIC_URL + '/images/meals/roasted_chicken_meal.JPG'} alt="Roasted Chicken Meal" className="rounded-2xl shadow-xl w-full max-w-xs object-cover mb-6" style={{maxHeight: '180px'}} />
+                  <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
+                    Mexican Rostisado Style
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Our chicken is cooked in the Mexican "rostisado" style. With our special marinade 
+                    and multi-hour cooking process, the chicken we serve is tender and juicy with a 
+                    prominent citrus flavor profile.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed font-semibold">
+                    The end result is a quality meal at a fast food price.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -204,7 +204,7 @@ const Home = () => {
                   <div>Jackson Heights</div>
                 </div>
                 <a
-                  href="/locations"
+                  href="/locations#new-york"
                   className="mt-6 inline-block bg-amber-600 text-white hover:bg-amber-700 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
                 >
                   View NY Locations
@@ -225,7 +225,7 @@ const Home = () => {
                   <div>Wheaton</div>
                 </div>
                 <a
-                  href="/locations"
+                  href="/locations#maryland"
                   className="mt-6 inline-block bg-amber-600 text-white hover:bg-amber-700 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
                 >
                   View MD Locations

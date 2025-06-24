@@ -100,9 +100,14 @@ const Catering = () => {
               Famous Rotisserie & Grill's event catering services will make any event in the area memorable. 
               Our staff of professionals will ensure your guests enjoy the best BBQ meals.
             </p>
+            <div className="flex justify-center mt-12">
+              <img src={process.env.PUBLIC_URL + '/images/meals/chicken_shrimp_meal_updated.JPG'} alt="Chicken and Shrimp Combo Meal" className="rounded-3xl shadow-xl w-full max-w-xl object-cover" style={{height: '16rem', objectPosition: 'center 40%'}} />
+            </div>
           </motion.div>
         </div>
       </section>
+
+      {/* Meal Gallery Section removed as requested */}
 
       {/* Services Section */}
       <section className="py-16 bg-white">
@@ -232,6 +237,8 @@ const Catering = () => {
                     <img src="/images/cheesecake.JPEG" alt="Cheesecake" className="mx-auto rounded-lg object-cover" style={{height: '80px', width: '80px'}} />
                   ) : addon.name === 'Red Velvet Cake' ? (
                     <img src="/images/red_velvet_cake.JPEG" alt="Red Velvet Cake" className="mx-auto rounded-lg object-cover" style={{height: '80px', width: '80px'}} />
+                  ) : addon.name === 'Chocolate Cake' ? (
+                    <img src="/images/chocolatecake.jpg" alt="Chocolate Cake" className="mx-auto rounded-lg object-cover" style={{height: '80px', width: '80px'}} />
                   ) : (
                     '🍰'
                   )}
@@ -294,8 +301,8 @@ const Catering = () => {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <div className="bg-white text-amber-600 p-8 rounded-2xl">
-                <div className="text-6xl mb-6">🍗</div>
+              <div className="bg-white text-amber-600 p-8 rounded-2xl flex flex-col items-center">
+                <img src={process.env.PUBLIC_URL + '/images/meals/spicy_bbq_chicken_meal.JPG'} alt="Spicy BBQ Chicken Meal" className="rounded-2xl shadow-xl w-full object-cover mb-6" style={{maxWidth: '340px', maxHeight: '200px'}} />
                 <h3 className="text-2xl font-playfair font-bold mb-4">
                   Best BBQ Chicken
                 </h3>

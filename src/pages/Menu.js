@@ -86,7 +86,7 @@ const Menu = () => {
       category: 'chicken',
       popular: false,
       image: process.env.PUBLIC_URL + '/images/product_Spicy_BBQ_chicken.jpg',
-      spicy: true
+      spicy: false
     },
     {
       id: 8,
@@ -252,6 +252,15 @@ const Menu = () => {
       category: 'desserts',
       popular: false,
       image: process.env.PUBLIC_URL + '/images/red_velvet_cake.JPEG',
+      spicy: false
+    },
+    {
+      id: 26,
+      name: 'Chocolate Cake',
+      description: 'Rich chocolate cake for dessert lovers',
+      category: 'desserts',
+      popular: false,
+      image: process.env.PUBLIC_URL + '/images/chocolatecake.jpg',
       spicy: false
     }
   ];

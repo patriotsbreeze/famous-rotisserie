@@ -101,10 +101,9 @@ const About = () => {
               initial={{ opacity: 0, x: 30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8 }}
-              className="relative"
             >
-              <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-3xl p-8">
-                <div className="text-6xl mb-6">🍗</div>
+              <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-3xl p-8 flex flex-col items-center">
+                <img src={process.env.PUBLIC_URL + '/images/meals/orange_chicken_meal.JPG'} alt="Orange Chicken Meal" className="rounded-2xl shadow-xl w-full max-w-xs object-cover mb-6" style={{maxHeight: '180px'}} />
                 <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
                   Our Chicken Philosophy
                 </h3>
